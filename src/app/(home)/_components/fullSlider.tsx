@@ -8,8 +8,8 @@ const FullSlider = ({data}: { data: FullSliderData[] }) => {
             slidesPerView={1}
             navigation={true}
             pagination={true}
-            // loop={true}
-            autoplay={false}
+            loop={true}
+            autoplay={{delay: 3000}}
         >
             {data.map((banner) => (
                 <LinkedImage 
@@ -19,6 +19,9 @@ const FullSlider = ({data}: { data: FullSliderData[] }) => {
                     src={banner.image} 
                     href={banner.url.uri}
                     alt={banner.title} 
+                    width={1700}
+                    height={400}
+                    loading={"eager"}
                 />
             ))}
         </Slider>

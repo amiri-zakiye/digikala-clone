@@ -5,6 +5,7 @@
     transition: all .2s;
     right: 40px;
     opacity: 0;
+    z-index: 1;
 }
 .swiper_container:hover .fullslider_nav{
     opacity: 1;

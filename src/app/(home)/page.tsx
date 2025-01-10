@@ -4,7 +4,6 @@ import { ApiResponse,widgetTypeMap } from './widget.const';
 export default async function Home() {
   
   const { widgets } : ApiResponse = await apiClient.get("api/widgets/")
-  console.log(widgets)
 
   return (
     <main className="flex flex-col gap-y-4">
