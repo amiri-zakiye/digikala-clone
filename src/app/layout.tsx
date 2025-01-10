@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 import Icons from "@/components/Icons";
-import Header from "@/components/header/header";
+import Header from "@/components/layout/header/header";
 
-import "../ui/globals.css";
-import { iranYekan, CubeFontIcon } from "@/ui/fonts";
+import "@/styles/globals.css";
+import { iranYekan, CubeFontIcon } from "@/styles/fonts";
 
 export const metadata: Metadata = {
   title: "Digikala Next App",

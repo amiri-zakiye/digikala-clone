@@ -1,5 +1,5 @@
 import Search from "./search";
-import LinkedImage from "../common/linkedImage";
+import LinkedImage from "../../ui/linkedImage";
 import IconsMenu from "./menus/iconsMenu";
 import MainMenu from "./menus/mainMenu";
 
@@ -11,7 +11,7 @@ const Header = () => {
                     <div className="flex-1">
                         <div className="flex items-center">
                             <LinkedImage 
-                                className="ml-5" 
+                                containerClassName="ml-5" 
                                 src="/full-horizontal.svg" 
                                 href="/"
                                 width={195} 

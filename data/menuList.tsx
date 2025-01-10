@@ -1,4 +1,4 @@
-export const menuList = [
+export default  [
     [
         {
             title: 'شگفت‌انگیز‌ها',

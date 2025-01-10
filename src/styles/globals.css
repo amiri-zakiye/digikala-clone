@@ -43,3 +43,35 @@ img{
 .cube-font-icon:before {
     content: attr(data-icon);
 }
+
+
+.pagination-bullet{
+    height: 4px;
+    opacity: .3;
+    transition: width .2s ease-in-out;
+    width: 4px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    background-color: #0c0c0c;
+    cursor: pointer;
+}
+.pagination-bulletActive{
+    background-color: #fff;
+    border-radius: 9999px;
+    height: 6px;
+    opacity: 1;
+    transform: translateY(1px);
+    width: 16px;
+}
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    transition: opacity .3s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 10;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}

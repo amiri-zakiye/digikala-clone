@@ -39,7 +39,7 @@ class ApiClient {
   }
 
   async get<T>(url: string, options?: Options): Promise<T> {
-    console.log(url);
+    console.log("urlll",url);
     return this.client.get(url, options).json();
   }
 

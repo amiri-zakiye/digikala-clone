@@ -1,5 +1,5 @@
 import  Link from "next/link"
-import { menuList } from "../data/menuList";
+import menuList from "../../../../../data/menuList";
 
 const MainMenu  = () => {
     return(

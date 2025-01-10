@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  "proxy": "www.digikala.com"
+    images: {  
+        domains: ['dkstatics-public.digikala.com']
+      },
 };
 
 export default nextConfig;

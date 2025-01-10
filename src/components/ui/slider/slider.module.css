@@ -1,0 +1,20 @@
+@tailwind components;
+
+.fullslider_nav{
+    bottom: 42px;
+    transition: all .2s;
+    right: 40px;
+    opacity: 0;
+}
+.swiper_container:hover .fullslider_nav{
+    opacity: 1;
+}
+@layer components {
+.swiper_btn{
+    border: 1px solid var(--neutral-300);
+    height: 40px;
+    width: 40px;
+    color: var(--neutral-700);
+    @apply flex cursor-pointer items-center justify-center bg-white rounded-full text-neutral-700 ml-1
+}
+}
