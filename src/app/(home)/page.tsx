@@ -1,5 +1,5 @@
 import {apiClient} from '@/lib/apiClient';
-import { ApiResponse,widgetTypeMap } from './widget.const';
+import { ApiResponse,widgetTypeMap } from './types';
 
 export default async function Home() {
   

@@ -9715,7 +9715,7 @@ export default  {
                             "uri": "\/mag\/inquiry-of-sayadi-check\/"
                         },
                         "created_at": "\u06f3 \u0631\u0648\u0632  \u0642\u0628\u0644",
-                        "image": "https:\/\/www.digikala.com\/mag\/wp-content\/uploads\/2025\/01\/\u0627\u0633\u062a\u0639\u0644\u0627\u0645-\u0686\u06a9-\u0635\u06cc\u0627\u062f\u06cc.jpg",
+                        "image" : "http://localhost:3000/magazine/inquiry-of-sayadi-check.jpg",
                         "category_title": "\u0622\u0645\u0648\u0632\u0634 \u0648 \u062a\u0631\u0641\u0646\u062f"
                     },
                     {
@@ -9725,8 +9725,8 @@ export default  {
                             "uri": "\/mag\/best-books-to-gift-to-men\/"
                         },
                         "created_at": "\u06f3 \u0631\u0648\u0632  \u0642\u0628\u0644",
-                        "image": "https:\/\/www.digikala.com\/mag\/wp-content\/uploads\/2025\/01\/best-books-to-gift-to-men.jpg",
-                        "category_title": "\u06a9\u062a\u0627\u0628 \u0648 \u0627\u062f\u0628\u06cc\u0627\u062a"
+                        "category_title": "\u06a9\u062a\u0627\u0628 \u0648 \u0627\u062f\u0628\u06cc\u0627\u062a",
+                        "image" : "http://localhost:3000/magazine/best-books-to-gift-to-men.jpg"
                     },
                     {
                         "post_type": "post",
@@ -9735,8 +9735,8 @@ export default  {
                             "uri": "\/mag\/boilingwater-honey-and-lemon-juice-for-colds\/"
                         },
                         "created_at": "\u06f3 \u0631\u0648\u0632  \u0642\u0628\u0644",
-                        "image": "https:\/\/www.digikala.com\/mag\/wp-content\/uploads\/2025\/01\/honey-lemon-cinnamon.jpg",
-                        "category_title": "\u06a9\u0627\u0644\u0627\u0647\u0627\u06cc \u062a\u0646\u062f \u0645\u0635\u0631\u0641"
+                        "category_title": "\u06a9\u0627\u0644\u0627\u0647\u0627\u06cc \u062a\u0646\u062f \u0645\u0635\u0631\u0641",
+                        "image" : "http://localhost:3000/magazine/honey-lemon-cinnamon.jpg"
                     },
                     {
                         "post_type": "post",
@@ -9745,8 +9745,8 @@ export default  {
                             "uri": "\/mag\/what-you-should-know-about-magnesium\/"
                         },
                         "created_at": "\u06f3 \u0631\u0648\u0632  \u0642\u0628\u0644",
-                        "image": "https:\/\/www.digikala.com\/mag\/wp-content\/uploads\/2025\/01\/pills.jpeg",
-                        "category_title": "\u0627\u0628\u0632\u0627\u0631 \u0633\u0644\u0627\u0645\u062a"
+                        "category_title": "\u0627\u0628\u0632\u0627\u0631 \u0633\u0644\u0627\u0645\u062a",
+                        "image" : "http://localhost:3000/magazine/pills.jpeg"
                     },
                     {
                         "post_type": "post",

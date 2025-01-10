@@ -1,8 +1,8 @@
 import Slider from "@/components/ui/slider/slider";
-import { FullSliderData } from "../widget.const";
+import { FullSlider } from "../types";
 import LinkedImage from "@/components/ui/linkedImage";
 
-const FullSlider = ({data}: { data: FullSliderData[] }) => {
+const FullSliderWidget = ({data}: { data: FullSlider[] }) => {
     return (
         <Slider
             slidesPerView={1}
@@ -28,4 +28,4 @@ const FullSlider = ({data}: { data: FullSliderData[] }) => {
     );
 }
 
-export default FullSlider;
+export default FullSliderWidget;
