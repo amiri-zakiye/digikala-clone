@@ -62,6 +62,7 @@ export default {
           "low-emphasis": "#a1a3a8",
           "high-emphasis": "#424750"
         },
+        "hint-object-error": "var(--hint-object-error)"
       },
       spacing: {
         '1': '4px',

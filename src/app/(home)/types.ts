@@ -3,7 +3,9 @@ import FullSliderWidget from "./_components/fullSlider";
 import { URL } from "@/types";
 import TrendingMagazine from "@/features/magazine/_components/trendingMagazineWidget/trendingMagazine";
 import BestSellingProductsOrderedWidget from "@/features/product/_components/bestSellingWidget/bestSellingProductsOrdered";
-import { BestSellingProductsOrdered } from "@/features/product/types";
+import { BestSellingProductsOrdered } from "@/features/product/_components/bestSellingWidget/types";
+import { IncredibleOffer } from "@/features/product/_components/incredibleOfferWidget/types";
+import IncredibleOfferWidget from "@/features/product/_components/incredibleOfferWidget/incredibleOfferWidget";
 
 export type FullSlider = {
     title: string;
@@ -16,7 +18,7 @@ export type Widget =
     | { name: "banners_home_web_zone_slider_new_v2" ,data: FullSlider[] }
     | { name: "magazine_posts", data: Magazine[] }
     // | { name: "deep_links", data: DeepLink[] }
-    // | { name: "incredible_offer_products_cart", data: IncredibleOffer }
+    | { name: "incredible_offer_products_cart", data: IncredibleOffer }
 
 
 export type ApiResponse = {
@@ -28,5 +30,5 @@ export const widgetTypeMap: Record<Widget["name"], React.FC<any>> = {
     banners_home_web_zone_slider_new_v2: FullSliderWidget,
     magazine_posts: TrendingMagazine,
     // deep_links: DeepLinks,
-    // incredible_offer_products_cart: IncredibleProducts,
+    incredible_offer_products_cart: IncredibleOfferWidget,
 };

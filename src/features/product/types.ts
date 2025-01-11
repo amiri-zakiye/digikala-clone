@@ -10,12 +10,7 @@ export type Product = {
     },
     default_variant:{
         rate: number,
-        price: {
-            selling_price: number,
-            rrp_price: number,
-            discount_percent: number,
-            timer: number
-        },
+        price: ProductPricing,
         shipment_methods: {
             has_lead_time: boolean,
             "providers": ProductShipmentMethod[]
@@ -58,12 +53,15 @@ export type ProductAttributes = [
     }
 ]
 
+export type ProductPricing = {
+    selling_price: number,
+    rrp_price: number,
+    discount_percent: number,
+    timer: number
+}
+
 export type ProductShipmentMethod = {
     title: string,
     type: "jet" | "digikala"
 }
 
-export type BestSellingProductsOrdered = {
-    title: string,
-    products: Product[]
-}
