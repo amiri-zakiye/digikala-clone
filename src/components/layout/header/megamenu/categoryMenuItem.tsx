@@ -1,11 +1,9 @@
 "use client";
 
 import { useMegaMenuContext } from "../context";
-import useMegaMenuLayout from "../hooks/useMegaMenuLayout";
 
 const CategoryMenuItem = () => {
-    const {displayMegaMenu,hideMegaMenu} = useMegaMenuContext()
-    const {menuWithDropDownRef} = useMegaMenuLayout()
+    const {displayMegaMenu,hideMegaMenu,menuWithDropDownRef} = useMegaMenuContext()
     
     return(
         <span 

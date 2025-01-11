@@ -3,13 +3,11 @@ import { replace } from "@/utils/formatters";
 import { Category } from "../types";
 import Link from "next/link";
 import { useMegaMenuContext } from "../context";
-import useMegaMenuLayout from "../hooks/useMegaMenuLayout";
 
 
 const MegaMenuSideNav = ({data}: {data: Category[]}) => {
-    const {activeMenuItemIndex,setActiveMenuItemIndex} = useMegaMenuContext();
-    const {mainCategoriesRef} = useMegaMenuLayout()
-
+    const {activeMenuItemIndex,setActiveMenuItemIndex,mainCategoriesRef} = useMegaMenuContext();
+    
     return(
         <ul ref={mainCategoriesRef} className="flex flex-col bg-neutral-100 rounded-bl-sm border-l border-neutral-100 w-[200px] overflow-auto h-full ltr scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
         {data.map((item) => (

@@ -1,6 +1,5 @@
 "use client";
 import { useMegaMenuContext } from '../context';
-import useMegaMenuLayout from '../hooks/useMegaMenuLayout';
 import { Category } from '../types';
 import { groupCategoriesByColumn } from '../utils/groupCategories';
 import RecursiveCategoryItem from './RecursiveCategoryItem';
@@ -32,8 +31,7 @@ const MegaMenuBody = ({data}: {data: Category[]}) => {
 }
 
 const MegaMenuBodyWrapper = ({item,children}: {item: Category,children: React.ReactNode}) => {
-    const {subCategoriesContainerHeight} = useMegaMenuLayout();
-    const {activeMenuItemIndex} = useMegaMenuContext()
+    const {activeMenuItemIndex,subCategoriesContainerHeight} = useMegaMenuContext()
 
     return(
         <div
