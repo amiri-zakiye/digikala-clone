@@ -2,6 +2,8 @@ import ky, { Options, KyInstance, KyRequest, NormalizedOptions, KyResponse, HTTP
 import env from '@/env';
 
 const KyIntrceptors = {
+
+  
     beforeRequest: [],
     afterResponse: [
       // async (_request: KyRequest, _options: NormalizedOptions, response: KyResponse) => {
@@ -52,4 +54,4 @@ class ApiClient {
 
 }
 
-export const apiClient = new ApiClient(env.API_URL || '');
+export const apiClient = new ApiClient(process.env.NEXT_PUBLIC_API_URL || '');

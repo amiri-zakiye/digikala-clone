@@ -110,5 +110,6 @@ img{
 }
 .megamenu{
     z-index: 4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.3);
     @apply flex rounded-b-sm rounded-l-sm bg-white absolute top-[35px] w-auto
 }

@@ -6,7 +6,7 @@ import { MegaMenuState,MegaMenuContextType } from "./types";
 import { megaMenuContextActions } from "./actions";
 
 const initialState: MegaMenuState = {
-  isMegaMenuVisible: false,
+  isMegaMenuVisible: true,
   activeMenuItemIndex: 1,
   megaMenuRef: null,
 };

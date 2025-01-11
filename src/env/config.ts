@@ -1,12 +1,10 @@
 export const getEnvSafely = (envKey: string) => {
 
-    const isServer = typeof window === "undefined";
-    const customEnvKey = isServer ? envKey : `NEXT_PUBLIC_${envKey}`;
     
-    const envVal = process.env[customEnvKey];
+    const envVal = process.env[envKey];
   
     if (!envVal) {
-      throw new Error(`Missing variable "${customEnvKey}"!`);
+      throw new Error(`Missing variable "${envKey}"!`);
     }
   
     return envVal;
