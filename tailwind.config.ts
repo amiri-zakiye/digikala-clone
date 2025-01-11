@@ -54,6 +54,10 @@ export default {
           500: "var(--secondary-500)",
           700: "var(--secondary-700)",
         },
+        caution: {
+          light: "var(--caution-light)",
+          text: "var(--caution-text)",
+        },
         icon:{
           "low-emphasis": "#a1a3a8",
           "high-emphasis": "#424750"

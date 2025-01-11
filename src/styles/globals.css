@@ -14,7 +14,9 @@
     --primary-500: #ef4056;
     --primary-700: #ef394e;
     --secondary-700: #008eb2;
-    --secondary-500: #19bfd3;    
+    --secondary-500: #19bfd3;  
+    --caution-light: rgba(245, 127, 23, 0.07);
+    --caution-text: #f57f17;  
 }
 
 html {
@@ -88,4 +90,14 @@ img{
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 2.17;
+}
+.text-h2-extra {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 2.1;
+}
+.text-h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 2.1;
 }

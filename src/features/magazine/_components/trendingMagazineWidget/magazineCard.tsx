@@ -1,4 +1,4 @@
-import {Magazine} from "./types";
+import {Magazine} from "../types";
 import Image from "next/image";
 
 const MagazineCard = ({magazine} : {magazine: Magazine}) => {
