@@ -3,8 +3,9 @@ import type { Config } from "tailwindcss";
 
 
 export default {
+
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/features/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js"
@@ -44,6 +45,14 @@ export default {
           600: "var(--neutral-600)",
           700: "var(--neutral-700)",
           900: "var(--neutral-900)",
+        },
+        primary: {
+          500: "var(--primary-500)",
+          700: "var(--primary-700)",
+        },
+        secondary: {
+          500: "var(--secondary-500)",
+          700: "var(--secondary-700)",
         },
         icon:{
           "low-emphasis": "#a1a3a8",

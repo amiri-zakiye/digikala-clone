@@ -10,7 +10,11 @@
     --neutral-500: #81858b;
     --neutral-600: #62666d;
     --neutral-700: #3f4064;
-    --neutral-900: #0c0c0c;    
+    --neutral-900: #0c0c0c;
+    --primary-500: #ef4056;
+    --primary-700: #ef394e;
+    --secondary-700: #008eb2;
+    --secondary-500: #19bfd3;    
 }
 
 html {
@@ -74,4 +78,14 @@ img{
     bottom: 10px;
     left: 0;
     width: 100%;
+}
+.text-h5{
+    font-weight: 700;
+    line-height: 2.1;
+    font-size: 1.6rem;
+}
+.text-button-2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2.17;
 }
