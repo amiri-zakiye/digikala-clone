@@ -108,3 +108,7 @@ img{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.megamenu{
+    z-index: 4;
+    @apply flex rounded-b-sm rounded-l-sm bg-white absolute top-[35px] w-auto
+}

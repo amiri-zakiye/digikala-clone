@@ -1,7 +1,7 @@
 import Search from "./search";
 import LinkedImage from "../../ui/linkedImage";
 import IconsMenu from "./menus/iconsMenu";
-import MainMenu from "./menus/mainMenu";
+import Navbar from "./menus/navbar";
 
 const Header = () => {
     return (
@@ -25,7 +25,7 @@ const Header = () => {
                 </div>
                 <div className="flex pb-1 items-center">
                     <div className="flex-1">
-                        <MainMenu />
+                        <Navbar />
                     </div>
                 </div>
             </div>
