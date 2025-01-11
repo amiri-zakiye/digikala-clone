@@ -15,8 +15,6 @@ const   MegaMenu = () => {
         apiClient.get("api/megaMenu").then((data: Category[]) => {
             setMegaMenuData(data)
         });
-
-        console.log("megaMenuHeight",megaMenuHeight) 
     }, []);
 
     return(
