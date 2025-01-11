@@ -1,5 +1,5 @@
 import { toFarsiNumber } from "@/utils/formatters";
-import { ProductPricing } from "../../types";
+import { ProductPricing } from "../types";
 import DiscountBadge from "./discountBadge";
 
 const ProductItemPricing = ({pricing}: {pricing: ProductPricing}) => {

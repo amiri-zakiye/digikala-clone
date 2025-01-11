@@ -1,6 +1,6 @@
 import { Product } from "@/features/product/types";
 import Link from "next/link";
-import ProductItemPricing from "../common/productItemPricing";
+import ProductItemPricing from "../../shared/productItemPricing";
 const ProductCard= ({product,counter} : {product: Product,counter:number}) => {
     return (
         <Link className={`${counter === 0 ? "rounded-r-sm"  : ""} block cursor-pointer relative bg-white overflow-hidden grow py-2 px-2 lg:px-2 shrink-0 ml-[2px] !h-[auto] lg:!h-full`}
