@@ -11,15 +11,19 @@ const IncredibleOfferWidget = ({data}: {data: IncredibleOffer}) => {
         <div className={`lg:block flex flex-col justify-center items-center lg:rounded-lg overflow-hidden ${styles.amazing_offers}`}>
             <div className="w-full flex flex-nowrap pb-5 lg:py-5 lg:pr-0 justify-stretch overflow-hidden relative lg:rounded-large pr-5">
                 <Slider 
-                    slidesPerView={8.2} 
+                    slidesPerView={"auto"} 
                     pagination={false} 
                     spaceBetween={2} 
                     navigation={false}
                 >
                     {[
-                        <IncredibleOfferBannerSlide key="incredible-offer" timer={getMaxTimer(data.products)} />,
+                        <CardWrapper key="incredible-offer" >
+                            <IncredibleOfferBannerSlide timer={getMaxTimer(data.products)} />
+                        </CardWrapper>,
                         ...data.products.map((item, index) => (
-                            <ProductCard key={item.id} product={item} counter={index} />
+                            <CardWrapper key={item.id}>
+                                <ProductCard product={item} counter={index} />
+                            </CardWrapper>
                         )),
                     ]}
                 </Slider>
@@ -29,4 +33,9 @@ const IncredibleOfferWidget = ({data}: {data: IncredibleOffer}) => {
     )
 }
 
+const CardWrapper = ({ children }: { children: React.ReactNode}) => (
+    <div className="w-[160px] min-w-[160px] max-w-[160px]" >
+      {children}
+    </div>
+);
 export default IncredibleOfferWidget;

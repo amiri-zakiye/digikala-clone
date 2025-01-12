@@ -71,7 +71,9 @@ const Slider: React.FC<SliderProps> = ({
                 className={className}
             >
                 {React.Children.map(children, (child: ReactElement) => (
-                    <SwiperSlide className={slidesPerView === "auto" ? "max-w-max" : ""} key={child.key}>{child}</SwiperSlide>
+                    <SwiperSlide style={ slidesPerView === "auto" ? {width: "auto",height: "auto"} : {}} className={slidesPerView === "auto" ? "max-w-max" : ""} key={child.key}>
+                            {child}
+                    </SwiperSlide>
                 ))}
                 {
                     navigation && <SliderNavigation swiperRef={swiperRef} />
