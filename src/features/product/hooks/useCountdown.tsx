@@ -13,7 +13,7 @@ const useCountDown =  (initialTimer: number) => {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [timer]);
+    }, []);
 
     return timer;
 }
