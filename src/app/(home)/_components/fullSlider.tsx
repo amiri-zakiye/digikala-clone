@@ -9,7 +9,7 @@ const FullSliderWidget = ({data}: { data: FullSlider[] }) => {
             navigation={true}
             pagination={true}
             loop={true}
-            autoplay={{delay: 3000}}
+            autoplay={{delay: 3000,disableOnInteraction: false}}
         >
             {data.map((banner) => (
                 <LinkedImage 

@@ -1,6 +1,7 @@
+import { memo } from "react";
 import { Category } from "../types";
 
-const RecursiveCategoryItem = ({ category, isTopLevel }: { category: Category; isTopLevel: boolean; }) => {
+const RecursiveCategoryItem = memo(({ category, isTopLevel }: { category: Category; isTopLevel: boolean; }) => {
 
     const hasChildren = category.children && category.children.length > 0;
 
@@ -30,6 +31,6 @@ const RecursiveCategoryItem = ({ category, isTopLevel }: { category: Category; i
             )}
         </div>
     );
-};
+});
 
 export default RecursiveCategoryItem;

@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from 'react';
 import { useMegaMenuContext } from '../context';
 import { Category } from '../types';
 import { groupCategoriesByColumn } from '../utils/groupCategories';
@@ -10,7 +11,7 @@ const MegaMenuBody = ({data}: {data: Category[]}) => {
         <>
         {
             data.map(item => {
-                    const groupedData = groupCategoriesByColumn(item.children);
+                const groupedData = useMemo(() => groupCategoriesByColumn(item.children), [item.children]);
                     return (
                         <MegaMenuBodyWrapper item={item} key={item.id}>
                             <div className="flex">

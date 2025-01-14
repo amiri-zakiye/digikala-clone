@@ -8,6 +8,7 @@ import styles from "./slider.module.css"
 // @ts-ignore
 import 'swiper/css';
 
+
 export interface SliderProps {
     children: ReactElement[];
     slidesPerView?: number | "auto";
@@ -16,7 +17,7 @@ export interface SliderProps {
     navigation ?: boolean
     spaceBetween?: number;
     breakpoints?: Record<number, { slidesPerView: number; spaceBetween?: number }>;
-    autoplay ?: {delay: number} | undefined,
+    autoplay ?: {delay: number,disableOnInteraction: boolean} | undefined,
     thumbSwiper ?: SwiperType,
     onSwiper ?: SetStateAction<SwiperType> ,
     freeMode ?: boolean,

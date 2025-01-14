@@ -65,11 +65,9 @@ img{
 }
 .pagination-bulletActive{
     background-color: #fff;
-    border-radius: 9999px;
-    height: 6px;
+    border-radius: 1px;
     opacity: 1;
-    transform: translateY(1px);
-    width: 16px;
+    transform: scale(4, 1.5);
 }
 .swiper-pagination {
     position: absolute;
