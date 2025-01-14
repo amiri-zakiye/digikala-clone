@@ -3,7 +3,7 @@ import { ApiResponse,widgetTypeMap } from './types';
 
 export default async function Home() {
   
-  const { widgets } : ApiResponse = await apiClient.get("api/widgets/")
+  const { widgets } : ApiResponse = await apiClient.get("widgets/")
 
   return (
     <main className="flex flex-col gap-y-4">
