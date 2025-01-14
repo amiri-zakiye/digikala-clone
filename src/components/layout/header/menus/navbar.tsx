@@ -9,8 +9,8 @@ const Navbar = () => {
             <MegaMenuProvider>
                 <CategoryMenuItem />
                 <MegaMenu />
-                <MainMenu />
             </MegaMenuProvider>
+            <MainMenu />
         </ul>
     )
 }
