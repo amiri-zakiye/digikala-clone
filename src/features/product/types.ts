@@ -1,3 +1,7 @@
+type URL = {
+    uri: string;
+}
+
 export type Product = {
     id: number,
     title_fa: string,
@@ -6,7 +10,7 @@ export type Product = {
         main:{
             url: string[],
         },
-        list: ProductGallery
+        list ?: ProductGallery
     },
     default_variant:{
         rate: number,

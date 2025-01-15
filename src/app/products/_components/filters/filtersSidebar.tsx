@@ -1,9 +1,10 @@
 import { apiClient } from "@/lib/apiClient";
 import Filter from "./filter";
+import { ShopResponse } from "../types";
 
 const FiltersSidebar = async() => {
 
-    const {filters} = await apiClient.get(`products/v1`)  
+    const {filters} = await apiClient.get<ShopResponse>(`products/v1`)  
 
     return(
         <section className="z-1 top-0 flex flex-col w-[300px] h-max">

@@ -19,8 +19,8 @@ export type CheckBoxFilter = {
 export type SwitchFilter = {
     type: "switch";
     title: string;
-    icon: string;
-    options: {
+    icon ?: string;
+    options ?: {
         id: number,
         title: string,
     }[]
@@ -50,7 +50,7 @@ export type Filter = {
 export type FilterTypes = CategoriesFilter | CheckBoxFilter | SwitchFilter | SliderFilter
 
 export type ShopResponse = {
-    products: Product[],
+    products: Partial<Product>[],
     filters: Filter,
     sort_options: Option[],
 }
