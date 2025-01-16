@@ -1,5 +1,4 @@
-import styles from "./header.module.css"
-
+import styles from "./styles.module.css"
 const SearchIcon = () => {
     return (
         <svg width="24px" height="24px" className={"fill-icon-low-emphasis"}>

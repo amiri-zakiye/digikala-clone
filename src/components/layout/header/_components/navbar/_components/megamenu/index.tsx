@@ -1,11 +1,10 @@
 "use client";
-
-import MegaMenuSideNav from "./megaMenuSideNav";
-import { useMegaMenuContext } from "../context";
 import { useEffect, useState } from "react";
 import { apiClient } from "@/lib/apiClient";
-import { Category } from "../types";
-import MegaMenuBody from "./megaMenuBody";
+import MegaMenuSideNav from "./_components/megaMenuSideNav";
+import { useMegaMenuContext } from "@/components/layout/header/context";
+import MegaMenuBody from "./_components/megaMenuBody";
+import { Category } from "./types";
 
 const   MegaMenu = () => {
     const { isMegaMenuVisible,displayMegaMenu,hideMegaMenu,megaMenuHeight} = useMegaMenuContext();

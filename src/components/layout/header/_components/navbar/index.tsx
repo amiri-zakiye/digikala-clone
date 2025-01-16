@@ -1,7 +1,7 @@
-import { MegaMenuProvider } from "../context";
-import CategoryMenuItem from "../megamenu/categoryMenuItem";
-import MegaMenu from "../megamenu/megaMenu";
-import MainMenu from "./mainMenu";
+import { MegaMenuProvider } from "../../context";
+import CategoryMenuItem from "./_components/categoryMenuItem";
+import MainMenu from "./_components/mainMenu";
+import MegaMenu from "./_components/megamenu";
 
 const Navbar = () => {
     return(

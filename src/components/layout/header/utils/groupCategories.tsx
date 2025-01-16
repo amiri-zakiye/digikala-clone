@@ -1,4 +1,4 @@
-import { Category } from "../types";
+import { Category } from "../_components/navbar/_components/megamenu/types";
 
 export const groupCategoriesByColumn = (categories: Category[]) => {
     return categories.reduce((acc, category) => {

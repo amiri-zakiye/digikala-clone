@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Category } from "../types";
+import { Category } from "@/components/layout/header/_components/navbar/_components/megamenu/types";
 
 const RecursiveCategoryItem = memo(({ category, isTopLevel }: { category: Category; isTopLevel: boolean; }) => {
 

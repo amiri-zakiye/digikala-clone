@@ -1,7 +1,7 @@
-import Search from "./search";
 import LinkedImage from "../../ui/linkedImage";
-import IconsMenu from "./menus/iconsMenu";
-import Navbar from "./menus/navbar";
+import Navbar from "./_components/navbar";
+import IconsMenu from "./_components/iconsMenu";
+import Search from "./_components/search";
 
 const Header = () => {
     return (
