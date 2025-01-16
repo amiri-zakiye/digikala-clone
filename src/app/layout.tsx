@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import Icons from "@/components/Icons";
-import Header from "@/components/layout/header/header";
+import Header from "@/components/layout/header";
 
 import "@/styles/globals.css";
 import { iranYekan, CubeFontIcon } from "@/styles/fonts";

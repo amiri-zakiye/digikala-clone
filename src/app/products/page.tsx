@@ -1,8 +1,8 @@
 import ProductGrid from "@/features/product/_components/productGrid/productGrid";
-import FiltersSidebar from "./_components/filters/filtersSidebar";
-import SortOptionsWrapper from "./_components/sort/sortOptionsWrapper";
+import SortOptionsWrapper from "./_components/sortTopbar";
+import FiltersSidebar from "./_components/filtersSidebar";
 
-const ProductsPage = async () => {
+const ProductsPage = () => {
 
     return(
       <main className="container pt-6">

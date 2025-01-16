@@ -1,4 +1,3 @@
-import { FilterTypes } from "../types";
 
 const Filter = <T extends FilterTypes>({filter,filterId}: {filter: T,filterId: string }) => {
     const { type } = filter;

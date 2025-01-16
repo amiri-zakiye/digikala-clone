@@ -1,6 +1,6 @@
-import SortList from "./sortOptions";
+import SortOptions from "./_components/sortOptions";
 
-const SortOptionsWrapper = () => {
+const SortTopbar = () => {
     return(
         <div className="lg:static sticky lg:top-14 top-16 z-2">
         <div className="flex items-center border-b border-neutral-200 gap-4 sticky top-20 lg:static">
@@ -14,7 +14,7 @@ const SortOptionsWrapper = () => {
                         </p>
                     </div>
                     <div className="contents">
-                        <SortList />
+                        <SortOptions />
                     </div>
                     <span className="text-neutral-500 mr-auto block whitespace-nowrap text-body-2 ellispis-1 xl:flex items-center gap-2">
                         کالا
@@ -25,4 +25,4 @@ const SortOptionsWrapper = () => {
     )
 }
 
-export default SortOptionsWrapper;
+export default SortTopbar;

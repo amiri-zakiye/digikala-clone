@@ -1,6 +1,6 @@
 import { apiClient } from "@/lib/apiClient";
-import Filter from "./filter";
-import { ShopResponse } from "../types";
+import Filter from "./_components/filter"
+import { ShopResponse } from "./types"
 
 const FiltersSidebar = async() => {
 
