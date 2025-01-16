@@ -1,4 +1,4 @@
-import ProductGrid from "@/features/product/_components/productGrid/productGrid";
+import ProductGrid from "@/features/product/_components/productGrid";
 import SortOptionsWrapper from "./_components/sortTopbar";
 import FiltersSidebar from "./_components/filtersSidebar";
 

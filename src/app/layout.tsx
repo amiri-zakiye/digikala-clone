@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import Icons from "@/components/Icons";
+import Icons from "@/components/ui/Icons";
 import Header from "@/components/layout/header";
 
 import "@/styles/globals.css";

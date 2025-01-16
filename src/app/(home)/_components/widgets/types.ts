@@ -1,12 +1,12 @@
-import BestSellingProductsOrderedWidget from "@/features/product/_components/bestSellingWidget/bestSellingProductsOrdered";
-
 import { BestSellingProductsOrdered } from "@/features/product/_components/bestSellingWidget/types";
 import { FullSlider } from "../fullSlider/types";
 import { IncredibleOffer } from "@/features/product/_components/incredibleOfferWidget/types";
-import { Magazine } from "@/features/magazine/types";
 import FullSliderWidget from "../fullSlider";
-import TrendingMagazine from "@/features/magazine/_components/trendingMagazineWidget/trendingMagazine";
-import IncredibleOfferWidget from "@/features/product/_components/incredibleOfferWidget/incredibleOfferWidget";
+import TrendingMagazine from "@/features/magazine/_components/trendingMagazineWidget";
+import { Magazine } from "@/features/magazine/types";
+import IncredibleOfferWidget from "@/features/product/_components/incredibleOfferWidget";
+import BestSellingProductsOrderedWidget from "@/features/product/_components/bestSellingWidget";
+
 
 export type Widget =
     | { name: "best_selling_products_ordered", data: BestSellingProductsOrdered }

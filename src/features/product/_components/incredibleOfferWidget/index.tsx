@@ -1,9 +1,9 @@
 import Slider from "@/components/ui/slider/slider";
 import { IncredibleOffer } from "./types";
-import styles from "./incredibleOffer.module.css";
+import styles from "./styles.module.css";
 import { getMaxTimer } from "@/utils/formatters";
-import IncredibleOfferBannerSlide from "./incredibleOfferBannerSlide";
-import ProductCard from "./ProductCard";
+import IncredibleOfferBannerSlide from "./_components/incredibleOfferBannerSlide";
+import ProductCard from "./_components/productCard";
 
 const IncredibleOfferWidget = ({data}: {data: IncredibleOffer}) => {
     return (

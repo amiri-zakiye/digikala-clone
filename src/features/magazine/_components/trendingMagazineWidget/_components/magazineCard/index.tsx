@@ -1,5 +1,5 @@
-import {Magazine} from "../types";
 import Image from "next/image";
+import { Magazine } from "@/features/magazine/types";
 
 const MagazineCard = ({magazine} : {magazine: Magazine}) => {
     return (

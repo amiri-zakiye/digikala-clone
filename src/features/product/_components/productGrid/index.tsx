@@ -1,5 +1,5 @@
 import styles from "@/app/products/products.module.css"
-import ProductItem from "./productItem"
+import ProductItem from "./_components/productItem"
 const products = []
 
 const ProductGrid = () => {

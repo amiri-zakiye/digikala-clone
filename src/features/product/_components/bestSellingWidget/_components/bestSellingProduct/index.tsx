@@ -1,7 +1,8 @@
-import { Product } from "../../types"
 import Link from "next/link"
-import styles from "./bestSelling.module.css"
+import styles from "./styles.module.css"
 import { toFarsiNumber } from "@/utils/formatters"
+import { Product } from "@/features/product/types"
+
 const BestSellingProduct = ({product, counter} : {product: Product, counter: number}) => {
     return (
         <Link className={`flex  ${styles.products_container}`} href={`/product/${product.id}`}>

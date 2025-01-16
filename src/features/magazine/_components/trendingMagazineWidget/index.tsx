@@ -1,6 +1,7 @@
-import MagazineCard from "./magazineCard";
-import MagazinePostsTitle from "./trendingMagazineTitle";
+
 import {MagazinePosts} from "../../types";
+import MagazineCard from "./_components/magazineCard";
+import MagazinePostsTitle from "./_components/title";
 
 const itemsCount = 4;
 

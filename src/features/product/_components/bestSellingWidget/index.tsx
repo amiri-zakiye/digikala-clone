@@ -1,6 +1,7 @@
-import { BestSellingProductsOrdered, Product } from "../../types";
-import BestSellingProduct from "./bestSellingProduct";
-import BestSellingProductsTitle from "./bestSellingProductsTitle";
+import { Product } from "../../types";
+import BestSellingProduct from "./_components/bestSellingProduct";
+import BestSellingProductsTitle from "./_components/bestSellingProductTitle";
+import { BestSellingProductsOrdered } from "./types";
 
 const BestSellingProductsOrderedWidget = ({data} : {data: BestSellingProductsOrdered}) => {
     return (
