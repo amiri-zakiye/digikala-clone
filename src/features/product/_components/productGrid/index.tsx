@@ -4,7 +4,9 @@ import { apiClient } from "@/lib/apiClient"
 import { ShopResponse } from "@/app/products/_components/filtersSidebar/types"
 
 const ProductGrid = async() => {
-    const { products } = await apiClient.get<ShopResponse>("products/v1")
+    const {data} = await apiClient.get<ShopResponse>("products/v1")
+    const products = data.products
+
     return(
         <div className={styles.productGrid}>
         {

@@ -4,7 +4,8 @@ import { ShopResponse } from "../../../filtersSidebar/types";
 
 const SortOptions = async() => {
     
-    const {sort_options} = await apiClient.get<ShopResponse>(`products/v1`)
+    const {data} = await apiClient.get<ShopResponse>(`products/v1`)
+    const sort_options = data.sort_options
 
     return(
         <>
