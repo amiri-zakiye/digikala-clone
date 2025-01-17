@@ -1,10 +1,9 @@
-import { apiClient } from "@/lib/apiClient";
 import SortOption from "./_components/sortOption";
-import { ShopResponse } from "../../../filtersSidebar/types";
+import productApiClient from "@/features/product/apiLayer/product"
 
 const SortOptions = async() => {
     
-    const {data} = await apiClient.get<ShopResponse>(`products/v1`)
+    const {data} = await productApiClient.getProducts()
     const sort_options = data.sort_options
 
     return(

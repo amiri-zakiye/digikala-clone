@@ -1,17 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
-import { apiClient } from "@/lib/apiClient";
 import MegaMenuSideNav from "./_components/megaMenuSideNav";
 import { useMegaMenuContext } from "@/components/layout/header/context";
 import MegaMenuBody from "./_components/megaMenuBody";
 import { Category } from "./types";
+import rootApiLayer from "@/app/apiLayer"
 
 const   MegaMenu = () => {
     const { isMegaMenuVisible,displayMegaMenu,hideMegaMenu,megaMenuHeight} = useMegaMenuContext();
     const [megaMenuData, setMegaMenuData] = useState<Category[]>([]);
 
     useEffect(() => {
-        apiClient.get("api/megaMenu").then((data: Category[]) => {
+        rootApiLayer.getMegaMenu().then((data: Category[]) => {
             setMegaMenuData(data)
         });
     }, []);

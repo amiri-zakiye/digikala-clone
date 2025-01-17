@@ -1,13 +1,11 @@
 import styles from "./styles.module.css"
-import { apiClient } from "@/lib/apiClient"
-import { ShopResponse } from "@/app/products/_components/filtersSidebar/types"
 import ProductGrid from "./_components/productGrid"
+import productApiClient from "../../apiLayer/product"
 
 const ProductGridWrapper = async() => {
 
-    const {data} = await apiClient.get<ShopResponse>("products/v1")
+    const {data} = await productApiClient.getProducts()
     const products = data.products
-    
 
     return(
         <div className={styles.productGrid}>

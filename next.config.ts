@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
         return [
           {
             source: '/products/v1/:path*',  
-            destination: 'https://api.digikala.com/v1/search/?__digicdn_js_challenge=3f7774d6bd928894dad93946622b93eb5c5b4cbf&path=:path*'  
+            destination: 'https://api.digikala.com/v1/search/?__digicdn_js_challenge=f544c38ee1e1b27814e345b7b815ed340942ad4f&path=:path*'  
           },
         ]
       },

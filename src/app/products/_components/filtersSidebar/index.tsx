@@ -1,10 +1,9 @@
-import { apiClient } from "@/lib/apiClient";
 import Filter from "./_components/filter"
-import { ShopResponse } from "./types"
+import productApiClient from "../../../../features/product/apiLayer/product"
 
 const FiltersSidebar = async() => {
 
-    const {data} = await apiClient.get<ShopResponse>(`products/v1`)  
+    const {data} = await productApiClient.getProducts()
     const filters = data.filters
 
     return(
