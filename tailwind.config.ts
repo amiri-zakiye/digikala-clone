@@ -34,6 +34,7 @@ export default {
         sm : "0 1px 0 rgba(0,0,0,.14),0 2px 0 rgba(0,0,0,.05)",
       },
       borderRadius:{
+        xs: "4px",
         sm: "8px"
       },
       colors: {
