@@ -1,4 +1,4 @@
-import ProductGrid from "@/features/product/_components/productGrid";
+import ProductGridWrapper from "@/features/product/_components/productGrid";
 import SortOptionsWrapper from "./_components/sortTopbar";
 import FiltersSidebar from "./_components/filtersSidebar";
 
@@ -10,7 +10,7 @@ const ProductsPage = () => {
               <FiltersSidebar />
               <section className="w-full grow relative">
                   <SortOptionsWrapper />
-                  <ProductGrid />
+                  <ProductGridWrapper />
               </section>
           </div>
       </main>

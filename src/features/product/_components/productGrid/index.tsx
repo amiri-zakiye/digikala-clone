@@ -1,23 +1,19 @@
 import styles from "./styles.module.css"
-import ProductItem from "./_components/productItem"
 import { apiClient } from "@/lib/apiClient"
 import { ShopResponse } from "@/app/products/_components/filtersSidebar/types"
+import ProductGrid from "./_components/productGrid"
 
-const ProductGrid = async() => {
+const ProductGridWrapper = async() => {
+
     const {data} = await apiClient.get<ShopResponse>("products/v1")
     const products = data.products
+    
 
     return(
         <div className={styles.productGrid}>
-        {
-                products?.map((product) => {
-                return (
-                    <ProductItem key={`${product.id}`} product={product} />
-                )
-            })
-        }
+            <ProductGrid initialProducts={products}  />
         </div>
     )
 }
 
-export default ProductGrid;
+export default ProductGridWrapper;

@@ -24,7 +24,7 @@ export type Option = {
 }
 export type ShopResponse = {
     data: {
-        products: Partial<Product>[],
+        products: Product[],
         filters: Filter,
         sort_options: Option[]
     }
