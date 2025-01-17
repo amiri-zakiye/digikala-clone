@@ -1,8 +1,10 @@
-import styles from "@/app/products/products.module.css"
+import styles from "./styles.module.css"
 import ProductItem from "./_components/productItem"
-const products = []
+import { apiClient } from "@/lib/apiClient"
+import { ShopResponse } from "@/app/products/_components/filtersSidebar/types"
 
-const ProductGrid = () => {
+const ProductGrid = async() => {
+    const { products } = await apiClient.get<ShopResponse>("products/v1")
     return(
         <div className={styles.productGrid}>
         {
@@ -10,7 +12,6 @@ const ProductGrid = () => {
                 return (
                     <ProductItem key={`${product.id}`} product={product} />
                 )
-
             })
         }
         </div>

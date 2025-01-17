@@ -1,0 +1,19 @@
+.productGrid{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+.productGrid .productItem:nth-of-type(4n+1),
+.productGrid .productItem:nth-of-type(4n+2),
+.productGrid .productItem:nth-of-type(4n+3)
+{
+    border-left: 1px solid var(--neutral-100);
+}
+.productItem{
+    border-bottom: 1px solid var(--neutral-100);
+}
+.productItem:hover{
+    z-index: 1;
+    filter: drop-shadow(0 1px 5px rgba(0, 0, 0, .2));
+}

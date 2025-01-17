@@ -62,7 +62,9 @@ export default {
         },
         icon:{
           "low-emphasis": "#a1a3a8",
-          "high-emphasis": "#424750"
+          "high-emphasis": "#424750",
+          "delivery-jet-expansion": "#1028ff",
+          "rating-0-2": "#f9bc00"
         },
         "hint-object-error": "var(--hint-object-error)"
       },
