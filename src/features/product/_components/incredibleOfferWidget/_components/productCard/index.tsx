@@ -9,7 +9,7 @@ const ProductCard= ({product,counter} : {product: Product,counter:number}) => {
            href={`/product/${product.id}`}>
             <article className="overflow-hidden flex grow relative  gap-2 flex-col items-stretch justify-start h-full">
                 <div className="flex items-stretch flex-col relative  mx-auto w-[132px] h-[132px] leading-none">
-                        <img className="w-full rounded-medium inline-block object-contain"
+                        <img className="w-full rounded-sm inline-block object-contain"
                              src={product.images.main.url?.[0]}
                              width="132" height="132"
                              alt={product.title_fa}

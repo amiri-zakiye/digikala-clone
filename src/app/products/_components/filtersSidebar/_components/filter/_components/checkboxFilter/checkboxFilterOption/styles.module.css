@@ -1,0 +1,13 @@
+.checkbox_input{
+    background-color: #fff;
+    border: .2rem solid var(--neutral-700);
+    width: 1.8rem;
+    height: 1.8rem;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: all;
+    transition-duration: .15s;
+}
+.checkbox_label input:checked~.checkbox_input{
+    border: .2rem solid var(--secondary-700);
+    background-color: var(--secondary-700);
+}

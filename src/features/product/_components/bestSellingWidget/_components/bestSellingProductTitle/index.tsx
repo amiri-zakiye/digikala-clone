@@ -12,7 +12,7 @@ const BestSellingProductsTitle = () => {
             <p className="text-h3 text-neutral-900">پرفروش&zwnj;ترین کالاها</p>
         </div>
         <Link href={"/products"}
-            className="relative flex items-center user-select-none text-secondary-700 font-bold text-button-2 rounded-medium lg:absolute left-0 top-0 pl-4 shrink-0">
+            className="relative flex items-center user-select-none text-secondary-700 font-bold text-button-2 rounded-sm lg:absolute left-0 top-0 pl-4 shrink-0">
             <div className="flex items-center justify-center relative grow">مشاهده همه</div>
         </Link>
     </div>

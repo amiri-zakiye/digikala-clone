@@ -1,8 +1,9 @@
+"use client"
 import Switcher from "@/components/ui/switcher/switcher";
 
-const SwitcherFilter = () => {
+const SwitcherFilter = ({filterId}: {filterId: string}) => {
     return (
-        <Switcher key={""} onClick={() => {}} isOn={false}/>
+        <Switcher key={filterId} onClick={() => {}} isOn={false}/>
     )
 }   
 

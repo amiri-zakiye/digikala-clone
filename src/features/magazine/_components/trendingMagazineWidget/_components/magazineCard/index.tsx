@@ -4,7 +4,7 @@ import { Magazine } from "@/features/magazine/types";
 const MagazineCard = ({magazine} : {magazine: Magazine}) => {
     return (
         <a
-            className="bg-white mb-1 border  rounded-sm border-neutral-200 user-select-none rounded-medium flex flex-col h-full overflow-hidden"
+            className="bg-white mb-1 border  rounded-sm border-neutral-200 user-select-none rounded-sm flex flex-col h-full overflow-hidden"
             target="_blank" href={magazine.url.uri}>
             <div className="relative min-h-[200px]">
             <Image 
