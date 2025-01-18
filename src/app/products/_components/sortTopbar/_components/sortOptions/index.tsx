@@ -11,7 +11,7 @@ const SortOptions = ({options}: {options: Option[]}) => {
     const {defaultSort} = useShop()
     const {setQueryParam,getQueryParam} =  useQueryParameter()
     const defaultSortState = getQueryParam("sort") ?? defaultSort
-    const [activeSortId,setActiveSortId] = useState(defaultSortState)
+    const [activeSortId,setActiveSortId] = useState(Number(defaultSortState))
 
     const onClickHandler = (item: Option) => {
         setActiveSortId(Number(item.id))
