@@ -1,12 +1,15 @@
 "use client"
 
-const SortOption = ({item}: {item: any}) => {
+import { Option } from "../../../filtersSidebar/types";
+
+const SortOption = ({isActive,onClick,item}: {isActive: boolean,onClick:() => void,item:Option}) => {
+
     return(
         <span
-            onClick={() => {}}
+            onClick={onClick}
             key={item.id}
             className={`cursor-pointer whitespace-nowrap text-body-2 
-            ${ false ? 
+            ${ isActive ? 
                 "text-primary-700 text-caption-strong" : 
                 "text-neutral-500"}`
             }

@@ -1,16 +1,25 @@
-import SortOption from "../sortOption";
-import productApiClient from "@/features/product/apiLayer/product"
+"use client"
 
-const SortOptions = async() => {
-    
-    const {data} = await productApiClient.getProducts(1)
-    const sort_options = data.sort_options
+import { useState } from "react";
+import { Option } from "../../../filtersSidebar/types";
+import SortOption from "../sortOption";
+import { useShop } from "@/app/products/context";
+
+const SortOptions = ({options}: {options: Option[]}) => {
+  
+    const {defaultSort} = useShop()
+    const [activeSortId,setActiveSortId] = useState(defaultSort)
 
     return(
         <>
             {
-                sort_options.map((item: any) => (
-                    <SortOption key={item.id} item={item} />
+                options.map((item: Option) => (
+                    <SortOption
+                        isActive={item.id === activeSortId} 
+                        onClick={() => setActiveSortId(Number(item.id))} 
+                        key={item.id} 
+                        item={item} 
+                    />
                 ))
             }
         </>
