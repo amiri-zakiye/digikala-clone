@@ -1,3 +1,5 @@
+// "use server"
+
 import { ShopResponse } from "@/app/products/_components/filtersSidebar/types"
 import { apiClient } from "@/lib/apiClient"
 

@@ -10,7 +10,7 @@ const initialState: State = {
     filters: null,
     sort: null,
     pager: null,
-    isLoading: false,
+    isLoading: true,
     defaultSort: 22
 };
 

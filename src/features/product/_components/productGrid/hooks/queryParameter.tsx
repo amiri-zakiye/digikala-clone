@@ -11,9 +11,6 @@ const useQueryParameter = () => {
         
         const shouldSet = typeof paramValue === 'boolean' ? paramValue : !!paramValue;  
 
-        console.log(shouldSet)
-        console.log(paramValue)
-
         if (shouldSet) {  
             params.set(paramKey, typeof paramValue === 'boolean' ? '1' : paramValue);  
         } else {  

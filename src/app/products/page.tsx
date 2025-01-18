@@ -2,8 +2,13 @@ import ProductGridWrapper from "@/features/product/_components/productGrid";
 import SortOptionsWrapper from "./_components/sortTopbar";
 import FiltersSidebar from "./_components/filtersSidebar";
 import { ShopProvider } from "./context";
+import ProductGrid from "@/features/product/_components/productGrid";
+import productApiClient from "@/features/product/apiLayer/product"
 
-const ProductsPage = () => {
+const ProductsPage = async() => {
+
+  const {data} = await productApiClient.getProducts(1)
+  const {products,filters,pager} = data
 
     return(
       <main className="container pt-6">
@@ -12,8 +17,8 @@ const ProductsPage = () => {
               <FiltersSidebar />
               <section className="w-full grow relative">
                   <SortOptionsWrapper />
-                  <ProductGridWrapper />
-              </section>
+                  <ProductGrid initialProducts={products} initialFilters={filters} initialPager={pager}  />
+                  </section>
               </ShopProvider>
           </div>
       </main>

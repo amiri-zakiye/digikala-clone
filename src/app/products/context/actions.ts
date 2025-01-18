@@ -7,8 +7,8 @@ export default (dispatch: React.ActionDispatch<[action: Action]>) => {
         appendProducts: (products: Product[],pager: Pager) => {
             dispatch({type:"APPEND_PRODUCTS", payload:{products,pager}})
         },
-        setUpInitialProducts: (pager: Pager,filters:Filter) => {
-            dispatch({type:"SET_INITIAL_STATE",payload:{pager,filters}})
+        setUpInitialProducts: (products:Product[],pager: Pager,filters:Filter) => {
+            dispatch({type:"SET_INITIAL_STATE",payload:{products,pager,filters}})
         },
         setloading: (loading:boolean) => {
             dispatch({type:"SET_LOADING",payload:loading})

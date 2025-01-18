@@ -7,6 +7,7 @@ export const reducer = (state: State, action: Action): State => {
                 ...state,
                 products: [...(state.products || []), ...action.payload.products],
                 pager: action.payload.pager,
+
             };
 
         case "REPLACE_DATA":
@@ -34,7 +35,9 @@ export const reducer = (state: State, action: Action): State => {
             return {
                 ...state,
                 filters: action.payload.filters,
-                pager: action.payload.pager
+                pager: action.payload.pager,
+                products: action.payload.products,
+                isLoading:false
             }
         default:
             return state;
