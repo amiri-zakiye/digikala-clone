@@ -6,7 +6,7 @@ const useQueryParameter = () => {
     const router = useRouter();  
     const searchParams = useSearchParams();  
 
-    const queryParameterHandler = (paramKey: string,paramValue: string | boolean ) => {
+    const setQueryParam = (paramKey: string,paramValue: string | boolean ) => {
         const params = new URLSearchParams(searchParams.toString());  
         
         const shouldSet = typeof paramValue === 'boolean' ? paramValue : !!paramValue;  
@@ -20,7 +20,11 @@ const useQueryParameter = () => {
         router.push(`?${params.toString()}`);  
     }
 
-    return queryParameterHandler
+    const getQueryParam = (paramKey: string) => {
+        return searchParams.get(paramKey)
+    }
+
+    return {setQueryParam,getQueryParam}
 }
 
 export default useQueryParameter

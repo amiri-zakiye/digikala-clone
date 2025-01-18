@@ -6,9 +6,10 @@ import { CheckBoxFilter as CheckBoxFilterType } from "./types";
 import useQueryParameter from "@/features/product/_components/productGrid/hooks/queryParameter";
 
 const CheckboxFilter = ({filter,filterId}: { filter: CheckBoxFilterType,filterId:string }) => {
-    const [activeCheckboxId,setActiveCheckboxId] = useState("")
 
-    const setQueryParam =  useQueryParameter()
+    const {setQueryParam,getQueryParam} =  useQueryParameter()
+    const defaultCheckboxId = getQueryParam(`${filterId}[0]`)
+    const [activeCheckboxId,setActiveCheckboxId] = useState(defaultCheckboxId)
 
     const onClickHandler = (id: string) => {
         setActiveCheckboxId(id)

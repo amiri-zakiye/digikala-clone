@@ -9,8 +9,9 @@ import useQueryParameter from "@/features/product/_components/productGrid/hooks/
 const SortOptions = ({options}: {options: Option[]}) => {
   
     const {defaultSort} = useShop()
-    const [activeSortId,setActiveSortId] = useState(defaultSort)
-    const setQueryParam =  useQueryParameter()
+    const {setQueryParam,getQueryParam} =  useQueryParameter()
+    const defaultSortState = getQueryParam("sort") ?? defaultSort
+    const [activeSortId,setActiveSortId] = useState(defaultSortState)
 
     const onClickHandler = (item: Option) => {
         setActiveSortId(Number(item.id))

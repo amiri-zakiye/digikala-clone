@@ -15,7 +15,7 @@ const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProdu
 
     const searchParams = useSearchParams()
     const ref = useRef(null)
-    const {products, appendProducts,setUpInitialProducts, pager,isLoading,setloading} = useShop()
+    const {products, appendProducts,setUpInitialProducts,replaceProducts,resetProducts, pager,isLoading,setloading} = useShop()
 
     useEffect(() => {
         setUpInitialProducts(initialProducts,initialPager,initialFilters)
@@ -23,7 +23,12 @@ const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProdu
 
 
     useEffect(() => {
-
+        (async() => {
+            resetProducts()
+            const {data} = await productApiClient.getProducts(1,searchParams)
+            const {products: newProducts, pager: newPager, filters: newFilters} = data
+            replaceProducts(newProducts,newPager,newFilters)
+        })()
     },[searchParams])
 
 
@@ -35,7 +40,6 @@ const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProdu
                 const {data} = await productApiClient.getProducts(current_page +  1)
                 const {products: newProducts, pager: newPager} = data
                 appendProducts(newProducts,newPager)
-                setloading(false)
             }
         },
         root: ref,

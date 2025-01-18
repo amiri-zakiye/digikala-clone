@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 
 const SwitcherFilter = ({filterId}: {filterId: string}) => {
 
-    const [isOn, setIsOn] = useState<boolean>(false);
-    const setQueryParam =  useQueryParameter()
+    const {setQueryParam,getQueryParam} =  useQueryParameter()
+    const defaultValue = getQueryParam(filterId) === "1" ? true : false
+    const [isOn, setIsOn] = useState<boolean>(defaultValue);
 
     const onClickHandler = () => {
         setIsOn(isOnPrev => !isOnPrev);

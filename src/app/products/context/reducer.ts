@@ -7,7 +7,7 @@ export const reducer = (state: State, action: Action): State => {
                 ...state,
                 products: [...(state.products || []), ...action.payload.products],
                 pager: action.payload.pager,
-
+                isLoading:false
             };
 
         case "REPLACE_DATA":
@@ -15,17 +15,9 @@ export const reducer = (state: State, action: Action): State => {
                 ...state,
                 products: action.payload.products,
                 filters: action.payload.filters,
-                sort: action.payload.sort,
                 pager: action.payload.pager,
+                isLoading:false
             };
-
-        case "RESET_PRODUCTS":
-            return {
-                ...state,
-                products: [],
-                isLoading: true,
-            };
-
         case "SET_LOADING":
             return {
                 ...state,
@@ -38,6 +30,12 @@ export const reducer = (state: State, action: Action): State => {
                 pager: action.payload.pager,
                 products: action.payload.products,
                 isLoading:false
+            }
+        case "RESET_PRODUCTS":
+            return {
+                ...state,
+                products: [],
+                isLoading:true
             }
         default:
             return state;

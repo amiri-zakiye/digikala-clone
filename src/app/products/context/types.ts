@@ -20,7 +20,7 @@ export type Sort = {
 
 export type Action =
     | { type: "APPEND_PRODUCTS"; payload: { products: Product[]; pager: Pager; } }
-    | { type: "REPLACE_DATA"; payload: { products: Product[]; filters: Filter; sort: Sort; pager: Pager } }
+    | { type: "REPLACE_DATA"; payload: { products: Product[]; filters: Filter; pager: Pager } }
     | { type: "SET_LOADING"; payload: boolean }
     | { type: "RESET_PRODUCTS" }
     | {type: "SET_INITIAL_STATE", payload: {products:Product[],filters: Filter,pager:Pager}}
