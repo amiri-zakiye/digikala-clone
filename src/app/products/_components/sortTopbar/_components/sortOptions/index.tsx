@@ -1,9 +1,9 @@
-import SortOption from "./_components/sortOption";
+import SortOption from "../sortOption";
 import productApiClient from "@/features/product/apiLayer/product"
 
 const SortOptions = async() => {
     
-    const {data} = await productApiClient.getProducts()
+    const {data} = await productApiClient.getProducts(1)
     const sort_options = data.sort_options
 
     return(
