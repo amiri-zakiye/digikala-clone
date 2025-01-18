@@ -1,6 +1,13 @@
 import SortOptions from "./_components/sortOptions";
+import TotalProductCount from "./_components/totalProductCount";
+import productApiClient from "@/features/product/apiLayer/product"
 
-const SortTopbar = () => {
+const SortTopbar = async() => {
+
+      
+    const {data} = await productApiClient.getProducts(1)
+    const sort_options = data.sort_options
+
     return(
         <div className="lg:static sticky lg:top-14 top-16 z-2">
         <div className="flex items-center border-b border-neutral-200 gap-4 sticky top-20 lg:static">
@@ -14,11 +21,9 @@ const SortTopbar = () => {
                         </p>
                     </div>
                     <div className="contents">
-                        <SortOptions />
+                        <SortOptions options={sort_options} />
                     </div>
-                    <span className="text-neutral-500 mr-auto block whitespace-nowrap text-body-2 ellispis-1 xl:flex items-center gap-2">
-                        کالا
-                    </span>
+                    <TotalProductCount />
                 </div>
             </div>
         </div>

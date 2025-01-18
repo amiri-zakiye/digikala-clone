@@ -3,7 +3,7 @@ import productApiClient from "../../../../features/product/apiLayer/product"
 
 const FiltersSidebar = async() => {
 
-    const {data} = await productApiClient.getProducts()
+    const {data} = await productApiClient.getProducts(1)
     const filters = data.filters
 
     return(

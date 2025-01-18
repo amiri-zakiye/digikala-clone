@@ -14,8 +14,6 @@ const useInfiniteScroll = ({
 }) => {
     useEffect(() => {
         const currentRoot = root.current
-
-
         const observer = new IntersectionObserver(
             (entries) => {
                 const [entry] = entries;
@@ -34,7 +32,7 @@ const useInfiniteScroll = ({
         return () => {
             observer.disconnect();
         };
-    }, [onIntersect, root, rootMargin, threshold]);
+    }, [onIntersect]);
 };
 
 export default useInfiniteScroll;

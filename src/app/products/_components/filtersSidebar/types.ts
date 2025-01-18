@@ -2,6 +2,7 @@ import { SwitchFilter } from "./_components/filter/_components/switcherFilter/ty
 import { CheckBoxFilter } from "./_components/filter/_components/checkboxFilter/types"
 import { CategoriesFilter } from "./_components/filter/_components/categoriesFilter/types"
 import { Product } from "@/features/product/types"
+import { Pager } from "../../context/types"
 
 
 export type Filter = {
@@ -26,6 +27,7 @@ export type ShopResponse = {
     data: {
         products: Product[],
         filters: Filter,
-        sort_options: Option[]
+        sort_options: Option[],
+        pager: Pager
     }
 }

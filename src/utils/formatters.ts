@@ -1,6 +1,7 @@
 import { Product } from "@/features/product/types";
 
 export const toFarsiNumber = (num : string | number) => {
+    if(!num) return ""
     const farsiDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     return num.toString().replace(/\d/g, (digit) => farsiDigits[Number(digit)]);
 };

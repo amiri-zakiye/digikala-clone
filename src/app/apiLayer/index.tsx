@@ -3,6 +3,6 @@ import { apiClient } from "@/lib/apiClient"
 
 export default {
     getMegaMenu: async() => {
-        return apiClient.get("api/megaMenu") as Promise<Category[]>
+        return apiClient.get("api/megaMenu/") as Promise<Category[]>
     }
 }
