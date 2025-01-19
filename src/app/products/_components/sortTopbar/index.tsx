@@ -1,11 +1,11 @@
 import SortOptions from "./_components/sortOptions";
 import TotalProductCount from "./_components/totalProductCount";
-import productApiClient from "@/features/product/apiLayer/product"
+import {getProducts} from "@/features/product/apiLayer/product"
 
 const SortTopbar = async() => {
 
       
-    const {data} = await productApiClient.getProducts(1)
+    const {data} = await getProducts(1)
     const sort_options = data.sort_options
 
     return(

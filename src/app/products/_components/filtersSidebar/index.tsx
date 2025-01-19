@@ -1,9 +1,9 @@
 import Filter from "./_components/filter"
-import productApiClient from "../../../../features/product/apiLayer/product"
+import {getProducts} from "../../../../features/product/apiLayer/product"
 
 const FiltersSidebar = async() => {
 
-    const {data} = await productApiClient.getProducts(1)
+    const {data} = await getProducts(1)
     const filters = data.filters
 
     return(

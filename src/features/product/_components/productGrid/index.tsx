@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation"
 import useInfiniteScroll from "./hooks/inifineScroll"
 import ProductItem from "./_components/productItem"
 import ProductShimmer from "./_components/productShimmer"
-import productApiClient from "@/features/product/apiLayer/product"
+import {getProducts} from "@/features/product/apiLayer/product"
 
 const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProducts:Product[],initialPager:Pager,initialFilters: Filter}) => {
 
@@ -25,7 +25,7 @@ const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProdu
     useEffect(() => {
         (async() => {
             resetProducts()
-            const {data} = await productApiClient.getProducts(1,searchParams)
+            const {data} = await getProducts(1,searchParams)
             const {products: newProducts, pager: newPager, filters: newFilters} = data
             replaceProducts(newProducts,newPager,newFilters)
         })()
@@ -37,7 +37,7 @@ const ProductGrid = ({initialProducts,initialPager,initialFilters}:{initialProdu
             if (pager?.current_page && pager.current_page < pager.total_pages && !isLoading) {
                 setloading(true)
                 const { current_page } = pager
-                const {data} = await productApiClient.getProducts(current_page +  1)
+                const {data} = await getProducts(current_page +  1)
                 const {products: newProducts, pager: newPager} = data
                 appendProducts(newProducts,newPager)
             }

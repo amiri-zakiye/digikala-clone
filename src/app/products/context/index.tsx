@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useReducer, useContext, createContext } from "react";
+import React, { useReducer, useContext, createContext, useMemo } from "react";
 import { reducer } from "./reducer";
 import { ShopContextType, State } from "./types";
 import getShopActions from "./actions"
@@ -20,9 +20,10 @@ const shopContext = createContext<ShopContextType>(null);
 export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    const memoizedState = useMemo(() => ({ state, dispatch }), [state, dispatch]);  
     return (
         <>
-            <shopContext.Provider value={{state, dispatch}}>
+            <shopContext.Provider value={{...memoizedState}}>
                 {children}
             </shopContext.Provider>
         </>

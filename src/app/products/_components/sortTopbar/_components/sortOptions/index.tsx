@@ -1,16 +1,15 @@
 "use client"
 
-import { useState } from "react";
+import { memo, useState } from "react";
 import { Option } from "../../../filtersSidebar/types";
 import SortOption from "../sortOption";
-import { useShop } from "@/app/products/context";
 import useQueryParameter from "@/features/product/_components/productGrid/hooks/queryParameter";
+import { useShop } from "@/app/products/context";
 
-const SortOptions = ({options}: {options: Option[]}) => {
-  
+const SortOptions = memo(({options}: {options: Option[]}) => {
     const {defaultSort} = useShop()
     const {setQueryParam,getQueryParam} =  useQueryParameter()
-    const defaultSortState = getQueryParam("sort") ?? defaultSort
+    const defaultSortState = getQueryParam("sort") || defaultSort
     const [activeSortId,setActiveSortId] = useState(Number(defaultSortState))
 
     const onClickHandler = (item: Option) => {
@@ -33,6 +32,6 @@ const SortOptions = ({options}: {options: Option[]}) => {
             }
         </>
     )
-}
+})
 
 export default SortOptions;

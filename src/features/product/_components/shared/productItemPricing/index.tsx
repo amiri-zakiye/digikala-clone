@@ -1,8 +1,11 @@
 import { toFarsiNumber } from "@/utils/formatters";
-import { ProductPricing } from "../../types";
 import DiscountBadge from "../discountBadge";
+import { ProductPricing } from "@/features/product/types";
 
 const ProductItemPricing = ({pricing}: {pricing: ProductPricing}) => {
+    if(!pricing){
+        return null
+    }
     return (
         <div className="pt-1 flex flex-col items-stretch justify-between">
         <div className="flex items-center justify-between">
