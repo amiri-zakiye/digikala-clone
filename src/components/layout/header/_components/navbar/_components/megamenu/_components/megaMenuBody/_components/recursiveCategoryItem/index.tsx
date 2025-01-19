@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Category } from "@/components/layout/header/_components/navbar/_components/megamenu/types";
+import Link from "next/link";
 
 const RecursiveCategoryItem = memo(({ category, isTopLevel }: { category: Category; isTopLevel: boolean; }) => {
 
@@ -8,7 +9,7 @@ const RecursiveCategoryItem = memo(({ category, isTopLevel }: { category: Catego
     return (
         <div className="min-w-[220px] w-max h-fit whitespace-nowrap" key={category.id}>
             {isTopLevel || hasChildren ? (
-                <a
+                <Link
                     style={{ fontSize: "1.4rem" }}
                     href="#"
                     className={`group relative flex items-center hover:text-primary-500 
@@ -19,11 +20,11 @@ const RecursiveCategoryItem = memo(({ category, isTopLevel }: { category: Catego
                     <svg className="group-hover:fill-primary-500 fill-neutral-900" width={"16px"} height={"16px"} >
                         <use xlinkHref="#chevronLeft"></use>
                     </svg>
-                </a>
+                </Link>
             ) : (
-                <a className="text-neutral-500 py-1 hover:text-primary-500 text-body-2" key={category.id}>
+                <Link href={"#"} className="text-neutral-500 py-1 hover:text-primary-500 text-body-2" key={category.id}>
                     {category.title}
-                </a>
+                </Link>
             )}
 
             {hasChildren && category.children.length > 0 && (
