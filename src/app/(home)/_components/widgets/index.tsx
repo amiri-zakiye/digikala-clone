@@ -1,10 +1,10 @@
 
 import { ApiResponse, widgetTypeMap } from "./types";
-import widgetsApiClient from "../../apiLayer/home"
+import {getWidgets} from "../../apiLayer/home"
 
 const Widgets = async() => {
 
-    const { widgets } : ApiResponse = await widgetsApiClient.getWidgets()
+    const { widgets } : ApiResponse = await getWidgets()
     
     return (
         <>

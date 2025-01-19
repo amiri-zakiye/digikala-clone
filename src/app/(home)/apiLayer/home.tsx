@@ -1,7 +1,8 @@
-import { apiClient } from "@/lib/apiClient"
+"use server";
 
-export default {
-    getWidgets: async() => {
-        return apiClient.get("widgets/") 
-    }
-}
+import { apiClient } from "@/lib/apiClient";
+import { ApiResponse } from "../_components/widgets/types";
+
+export const getWidgets = async (): Promise<ApiResponse> => {
+  return apiClient.get("widgets/");
+};

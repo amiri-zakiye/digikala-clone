@@ -9,7 +9,6 @@ const ProductsPage = async() => {
   const {data} = await getProducts(1)
   const {products,filters,pager} = data
 
-    console.log("rerender...")
     return(
       <main className="container pt-6">
           <div className={`relative w-full flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-x-5`}>
