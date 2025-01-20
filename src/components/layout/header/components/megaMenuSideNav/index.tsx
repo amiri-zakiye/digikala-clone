@@ -1,7 +1,8 @@
 "use client";
-import { Category } from "../../types";
-import { useMegaMenuContext } from "../../../../../../context";
-import MagaMenuSideNavItem from "./_components/megaMenuSideNavItem";
+
+import { useMegaMenuContext } from "../../context";
+import { Category } from "../megamenu/types";
+import MagaMenuSideNavItem from "../megaMenuSideNavItem";
 
 
 const MegaMenuSideNav = ({data}: {data: Category[]}) => {

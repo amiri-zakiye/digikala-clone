@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import MegaMenuSideNav from "./_components/megaMenuSideNav";
 import { useMegaMenuContext } from "@/components/layout/header/context";
-import MegaMenuBody from "./_components/megaMenuBody";
 import { Category } from "./types";
 import { getMegaMenu } from "@/app/apiLayer";
+import MegaMenuSideNav from "../megaMenuSideNav";
+import MegaMenuBody from "../megaMenuBody";
 
 const MegaMenu = () => {
   const { isMegaMenuVisible, displayMegaMenu, hideMegaMenu, megaMenuHeight } =

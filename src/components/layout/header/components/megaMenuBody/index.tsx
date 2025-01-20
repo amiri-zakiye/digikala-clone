@@ -1,9 +1,10 @@
 "use client";
 import { groupCategoriesByColumn } from '@/components/layout/header/utils/groupCategories';
 import { useMemo } from 'react';
-import RecursiveCategoryItem from './_components/recursiveCategoryItem';
-import MegaMenuBodyWrapper from './_components/wrapper';
-import { Category } from '../../types';
+import { Category } from '../megamenu/types';
+import MegaMenuBodyWrapper from '../wrapper';
+import RecursiveCategoryItem from '../recursiveCategoryItem';
+
 
 const MegaMenuBody = ({data}: {data: Category[]}) => {
     

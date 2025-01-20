@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       {
         source: "/products/v1/:path*",
         destination:
-          "https://api.digikala.com/v1/search/?__digicdn_js_challenge=024e4467e48b817f45318062606ea9069a4793aa&path=:path*",
+          "https://api.digikala.com/v1/search/?__digicdn_js_challenge=6f669c0d43435c3b720f39a9c3c9baf20af949dd&path=:path*",
       },
     ];
   },

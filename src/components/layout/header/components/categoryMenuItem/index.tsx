@@ -1,6 +1,6 @@
 "use client";
 
-import { useMegaMenuContext } from "../../../../context";
+import { useMegaMenuContext } from "../../context";
 
 const CategoryMenuItem = () => {
     const {displayMegaMenu,hideMegaMenu,menuWithDropDownRef} = useMegaMenuContext()
