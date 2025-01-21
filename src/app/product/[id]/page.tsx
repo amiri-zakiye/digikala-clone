@@ -3,18 +3,15 @@ import ProductHeaderSection from "./components/productHeaderSection";
 import ProductStock from "./components/productStock";
 import ProductSpecifications from "./components/productSpecifications";
 import styles from "./styles.module.css";
-import { getProductData } from "./apiLayer";
+import { getProductDataWithParams } from "./apiLayer";
 import { pageContext } from "@/utils/serverContext";
 
-const ProductPage = pageContext.Wrapper(async ({ params }) => {
-  const { id } = params;
-  const product = await getProductData(id);
-  console.log(product);
+const ProductPage = pageContext.Wrapper(async () => {
 
   return (
     <main className={"container"}>
       <section className={"flex flex-col lg:flex-row overflow-hidden"}>
-        <div className="flex flex-col items-center lg:max-w-92 xl:max-w-145 lg:block">
+        <div className="flex flex-col items-center ml-4 max-w-[36%]">
           <ProductMainThumbnail />
         </div>
         <div className={"grow"}>

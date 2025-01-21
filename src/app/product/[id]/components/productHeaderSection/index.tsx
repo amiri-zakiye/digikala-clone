@@ -1,4 +1,4 @@
-const ProductHeaderSection = () => {
+const ProductHeaderSection = async() => {
   return (
     <>
       <nav className={"flex items-center"}>
