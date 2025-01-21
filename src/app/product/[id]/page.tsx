@@ -4,10 +4,13 @@ import ProductStock from "./components/productStock";
 import ProductSpecifications from "./components/productSpecifications";
 import styles from "./styles.module.css";
 import { getProductData } from "./apiLayer";
+import { pageContext } from "@/utils/serverContext";
 
-const ProductPage = async () => {
-  const data = await getProductData(8366616);
-  console.log(data);
+const ProductPage = pageContext.Wrapper(async ({ params }) => {
+  const { id } = params;
+  const product = await getProductData(id);
+  console.log(product);
+
   return (
     <main className={"container"}>
       <section className={"flex flex-col lg:flex-row overflow-hidden"}>
@@ -18,7 +21,7 @@ const ProductPage = async () => {
           <ProductHeaderSection />
           <div className={styles.product_left_section}>
             <div className={" border-t border-neutral-200 pt-2"}>
-              <ProductSpecifications />
+              {/* <ProductSpecifications /> */}
             </div>
             <ProductStock />
           </div>
@@ -26,5 +29,5 @@ const ProductPage = async () => {
       </section>
     </main>
   );
-};
+});
 export default ProductPage;
