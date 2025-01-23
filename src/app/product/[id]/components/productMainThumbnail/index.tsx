@@ -1,12 +1,8 @@
-import { getProductDataWithParams } from "../../apiLayer";
-
-const ProductMainThumbnail = async () => {
-  const { images, title_fa } = await getProductDataWithParams();
-  const { main } = images;
+const ProductMainThumbnail =  ({imageUrl,title}: {imageUrl:string,title:string}) => {
 
   return (
     <>
-      <img src={main.url?.[0]} alt={title_fa} />
+      <img src={imageUrl} alt={title} />
     </>
   );
 };

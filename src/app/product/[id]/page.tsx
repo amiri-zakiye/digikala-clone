@@ -1,10 +1,9 @@
-import ProductMainThumbnail from "./components/productMainThumbnail";
 import ProductHeaderSection from "./components/productHeaderSection";
 import ProductStock from "./components/productStock";
 import ProductSpecifications from "./components/productSpecifications";
 import styles from "./styles.module.css";
-import { getProductDataWithParams } from "./apiLayer";
 import { pageContext } from "@/utils/serverContext";
+import ProductMedia from "./components/ProductMedia";
 
 const ProductPage = pageContext.Wrapper(async () => {
 
@@ -12,7 +11,7 @@ const ProductPage = pageContext.Wrapper(async () => {
     <main className={"container"}>
       <section className={"flex flex-col lg:flex-row overflow-hidden"}>
         <div className="flex flex-col items-center ml-4 max-w-[36%]">
-          <ProductMainThumbnail />
+          <ProductMedia />
         </div>
         <div className={"grow"}>
           <ProductHeaderSection />

@@ -44,9 +44,11 @@ export type Product = {
   };
 };
 
-export type ProductGallery = {
+export type ProductGalleryItem = {
   url: string[];
-}[];
+}
+
+export type ProductGallery = ProductGalleryItem[];
 
 export type ProductAttributes = [
   {

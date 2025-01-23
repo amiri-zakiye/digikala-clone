@@ -1,24 +1,39 @@
 "use client";
 
-import React, { ForwardedRef, ReactElement, SetStateAction, useRef } from "react";
+import React, {
+  ForwardedRef,
+  ReactElement,
+  SetStateAction,
+  useRef,
+} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
-import { Pagination, Navigation, Autoplay, FreeMode, Thumbs } from "swiper/modules";
+import {
+  Pagination,
+  Navigation,
+  Autoplay,
+  FreeMode,
+  Thumbs,
+} from "swiper/modules";
 import styles from "./slider.module.css";
 // @ts-ignore
 import "swiper/css";
+import { Dispatch } from "react";
 
 export interface SliderProps {
-  children: ReactElement[];
+  children ?: ReactElement[] | ReactElement;
   slidesPerView?: number | "auto";
   loop?: boolean;
   pagination?: boolean;
   navigation?: boolean;
   spaceBetween?: number;
-  breakpoints?: Record<number, { slidesPerView: number; spaceBetween?: number }>;
+  breakpoints?: Record<
+    number,
+    { slidesPerView: number; spaceBetween?: number }
+  >;
   autoplay?: { delay: number; disableOnInteraction: boolean } | undefined;
   thumbSwiper?: SwiperType;
-  onSwiper?: SetStateAction<SwiperType>;
+  onSwiper?: Dispatch<SetStateAction<SwiperType | undefined>>;
   freeMode?: boolean;
   watchSlidesProgress?: boolean;
   className?: string;
@@ -51,7 +66,7 @@ const Slider: React.FC<SliderProps> = ({
   return (
     <div className={`relative overflow-hidden ${styles.swiper_container}`}>
       <Swiper
-        modules={modules} 
+        modules={modules}
         slidesPerView={slidesPerView}
         loop={loop}
         onBeforeInit={(swiper) => {
@@ -77,7 +92,9 @@ const Slider: React.FC<SliderProps> = ({
       >
         {React.Children.map(children, (child: ReactElement) => (
           <SwiperSlide
-            style={slidesPerView === "auto" ? { width: "auto", height: "auto" } : {}}
+            style={
+              slidesPerView === "auto" ? { width: "auto", height: "auto" } : {}
+            }
             className={slidesPerView === "auto" ? "max-w-max" : ""}
             key={child.key}
           >
@@ -90,15 +107,27 @@ const Slider: React.FC<SliderProps> = ({
   );
 };
 
-const SliderNavigation = ({ swiperRef }: { swiperRef: ForwardedRef<SwiperType> }) => {
+const SliderNavigation = ({
+  swiperRef,
+}: {
+  swiperRef: ForwardedRef<SwiperType>;
+}) => {
   return (
-    <div className={`absolute right-0 flex items-center z-1 ${styles.fullslider_nav}`}>
-      <div onClick={() => swiperRef?.current?.slidePrev()} className={`${styles.swiper_btn}`}>
+    <div
+      className={`absolute right-0 flex items-center z-1 ${styles.fullslider_nav}`}
+    >
+      <div
+        onClick={() => swiperRef?.current?.slidePrev()}
+        className={`${styles.swiper_btn}`}
+      >
         <svg width={24} height={24} className={"fill-icon-high-emphasis"}>
           <use xlinkHref="#chevronRight"></use>
         </svg>
       </div>
-      <div onClick={() => swiperRef?.current?.slideNext()} className={`${styles.swiper_btn}`}>
+      <div
+        onClick={() => swiperRef?.current?.slideNext()}
+        className={`${styles.swiper_btn}`}
+      >
         <svg width={24} height={24} className={"fill-icon-high-emphasis"}>
           <use xlinkHref="#chevronLeft"></use>
         </svg>
