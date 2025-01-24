@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const __digicdn_js_challenge = "ff31e5b4156f722509e8b1187e5b7500a0d9ac08";
+const __digicdn_js_challenge = "7f47e476e6fc07d164232758d3df8c0ee5fdd159";
 
 const nextConfig: NextConfig = {
   images: {
