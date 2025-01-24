@@ -1,11 +1,6 @@
 "use client";
 
-import React, {
-  ForwardedRef,
-  ReactElement,
-  SetStateAction,
-  useRef,
-} from "react";
+import React, { ForwardedRef, ReactElement, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import {
@@ -18,26 +13,8 @@ import {
 import styles from "./slider.module.css";
 // @ts-ignore
 import "swiper/css";
-import { Dispatch } from "react";
-
-export interface SliderProps {
-  children ?: ReactElement[] | ReactElement;
-  slidesPerView?: number | "auto";
-  loop?: boolean;
-  pagination?: boolean;
-  navigation?: boolean;
-  spaceBetween?: number;
-  breakpoints?: Record<
-    number,
-    { slidesPerView: number; spaceBetween?: number }
-  >;
-  autoplay?: { delay: number; disableOnInteraction: boolean } | undefined;
-  thumbSwiper?: SwiperType;
-  onSwiper?: Dispatch<SetStateAction<SwiperType | undefined>>;
-  freeMode?: boolean;
-  watchSlidesProgress?: boolean;
-  className?: string;
-}
+import { SliderProps } from "./swiper.types";
+import { SwiperModule } from "swiper/types";
 
 const Slider: React.FC<SliderProps> = ({
   children,
@@ -61,7 +38,7 @@ const Slider: React.FC<SliderProps> = ({
   if (navigation) modules.push(Navigation);
   if (autoplay) modules.push(Autoplay);
   if (freeMode) modules.push(FreeMode);
-  if (thumbSwiper) modules.push(Thumbs);
+  if (thumbSwiper !== undefined || onSwiper !== undefined) modules.push(Thumbs);
 
   return (
     <div className={`relative overflow-hidden ${styles.swiper_container}`}>
@@ -84,7 +61,9 @@ const Slider: React.FC<SliderProps> = ({
         }
         spaceBetween={spaceBetween}
         breakpoints={breakpoints}
-        thumbs={{ swiper: thumbSwiper }}
+        thumbs={{
+          swiper: thumbSwiper && !thumbSwiper.destroyed ? thumbSwiper : null,
+        }}
         onSwiper={onSwiper}
         freeMode={freeMode}
         watchSlidesProgress={watchSlidesProgress}

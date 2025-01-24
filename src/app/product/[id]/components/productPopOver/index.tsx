@@ -3,9 +3,15 @@ import { useState } from "react";
 import Slider from "@/components/ui/slider/slider";
 import { SliderType } from "@/components/ui/slider/swiper.types";
 import { ProductGallery } from "@/types/product.types";
-
-const ProductPopOver = ({ items,closeGalleryPopOver }: { items ?: ProductGallery,closeGalleryPopOver: () => void }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<SliderType>();
+import Image from "next/image";
+const ProductPopOver = ({
+  items,
+  closeGalleryPopOver,
+}: {
+  items?: ProductGallery;
+  closeGalleryPopOver: () => void;
+}) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<SliderType | null>(null);
 
   return (
     <div className="fixed inset-0 bg-black z-40">
@@ -15,7 +21,7 @@ const ProductPopOver = ({ items,closeGalleryPopOver }: { items ?: ProductGallery
           "cursor-pointer top-large left-large z-10 absolute w-[30px] h-[30px]"
         }
       >
-        <svg width={24} height={24} className={"fill-icon-white"}>
+        <svg width={24} height={24} className={"fill-white"}>
           <use xlinkHref="#close"></use>
         </svg>
       </button>
@@ -34,7 +40,7 @@ const ProductPopOver = ({ items,closeGalleryPopOver }: { items ?: ProductGallery
                 }
                 key={item.url?.[0]}
               >
-                <img src={item.url?.[0]} alt="" />
+                <Image width="600" height="600" src={item.url?.[0]} alt="" />
               </div>
             );
           })}
@@ -56,7 +62,7 @@ const ProductPopOver = ({ items,closeGalleryPopOver }: { items ?: ProductGallery
                 }
                 key={`thumb_${item.url?.[0]}`}
               >
-                <img src={item.url?.[0]} alt="" />
+                <Image width="100" height="100" src={item.url?.[0]} alt="" />
               </div>
             );
           })}
