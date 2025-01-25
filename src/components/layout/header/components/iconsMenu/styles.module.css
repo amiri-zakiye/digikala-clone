@@ -1,0 +1,6 @@
+.cart_badge{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+}

@@ -5,6 +5,7 @@ import Header from "@/components/layout/header";
 
 import "@/styles/globals.css";
 import { iranYekan, CubeFontIcon } from "@/styles/fonts";
+import StoreProvider from "@/lib/store/provider";
 
 export const metadata: Metadata = {
   title: "Digikala Next App",
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html dir="rtl">
       <body className={`${iranYekan.className} ${CubeFontIcon.className}`}>
-        <Header />
-        {children}
+        <StoreProvider>
+          <Header />
+          {children}
+        </StoreProvider>
         <Icons />
       </body>
     </html>
