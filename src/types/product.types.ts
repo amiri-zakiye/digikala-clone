@@ -10,21 +10,7 @@ export type Product = {
     };
     list?: ProductGallery;
   };
-  default_variant: {
-    rate: number;
-    price: ProductPricing;
-    shipment_methods: {
-      has_lead_time: boolean;
-      providers: ProductShipmentMethod[];
-    };
-    seller: {
-      title: string;
-      grade: {
-        label: string;
-        color: string;
-      };
-    };
-  };
+  default_variant: ProductVariants;
   data_layer: {
     brand: string;
     item_category2: string;
@@ -44,9 +30,19 @@ export type Product = {
   };
 };
 
+export type ProductVariants = {
+  rate: number;
+  price: ProductPricing;
+  shipment_methods: {
+    has_lead_time: boolean;
+    providers: ProductShipmentMethod[];
+  };
+  seller: ProductSeller;
+};
+
 export type ProductGalleryItem = {
   url: string[];
-}
+};
 
 export type ProductGallery = ProductGalleryItem[];
 
@@ -57,6 +53,13 @@ export type ProductAttributes = [
   }
 ];
 
+export type ProductSeller = {
+  title: string;
+  grade: {
+    label: string;
+    color: string;
+  };
+};
 export type ProductPricing = {
   selling_price: number;
   rrp_price: number;

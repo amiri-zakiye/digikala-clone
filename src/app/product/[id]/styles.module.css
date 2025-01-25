@@ -1,0 +1,10 @@
+.product_left_section {
+  display: grid;
+  grid-template-columns: minmax(300px, auto) minmax(300px, 345px);
+  grid-template-rows: auto 0fr auto 1fr;
+  grid-template-areas:
+    "variant-info buy-box"
+    "fidibo-audio-preview buy-box"
+    "spec buy-box"
+    "touchPoints buy-box";
+}

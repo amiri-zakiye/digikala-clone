@@ -1,13 +1,20 @@
-const ProductSpecifications = () => {
+import { getProductDataWithParams } from "../../apiLayer";
+import ProductFeatures from "../productFeatures";
+import ProductRating from "../ProductRating";
+
+const ProductSpecifications = async() => {
+
+  const {data_layer,review,category,rating} = await getProductDataWithParams();
+  
   return (
     <>
       <ProductRating
-        ratingCount={data?.rating.count ?? 0}
-        rate={data?.data_layer.dimension9 ?? 0}
+        ratingCount={rating.count ?? 0}
+        rate={data_layer.dimension9 ?? 0}
       />
       <ProductFeatures
-        features={data?.review.attributes}
-        returnAlert={data?.category.return_reason_alert}
+        features={review.attributes}
+        returnAlert={category.return_reason_alert}
       />
     </>
   );
