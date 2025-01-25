@@ -5,7 +5,6 @@ import { toFarsiNumber } from "@/utils/formatters";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import CartItem from "../cartItem";
-import useCartDropDownToggle from "@/hooks/useCartDropDownToggle";
 
 const CartDropDown = () => {
   const { cartItems, count, totalAmount } = useCart();

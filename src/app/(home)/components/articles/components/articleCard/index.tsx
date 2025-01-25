@@ -6,7 +6,7 @@ const ArticleCard = ({magazine} : {magazine: Article}) => {
     return (
         <Link
             className="bg-white mb-1 border  rounded-sm border-neutral-200 user-select-none rounded-sm flex flex-col h-full overflow-hidden"
-            target="_blank" href={magazine.url.uri}>
+             href={magazine.url.uri}>
             <div className="relative min-h-[200px]">
             <Image 
                 className="w-full object-cover inline-block"

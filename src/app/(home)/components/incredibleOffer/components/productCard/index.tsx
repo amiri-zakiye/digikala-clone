@@ -5,7 +5,6 @@ import ProductItemPricing from "@/components/features/product/productItemPricing
 const ProductCard = ({product,counter} : {product: Product,counter:number}) => {
     return (
         <Link className={`${counter === 0 ? "rounded-r-sm"  : ""} block cursor-pointer relative bg-white overflow-hidden grow py-2 px-2 lg:px-2 shrink-0 ml-[2px] !h-[auto] lg:!h-full`}
-           target="_blank"
            href={`/product/${product.id}`}>
             <article className="overflow-hidden flex grow relative  gap-2 flex-col items-stretch justify-start h-full">
                 <div className="flex items-stretch flex-col relative  mx-auto w-[132px] h-[132px] leading-none">
