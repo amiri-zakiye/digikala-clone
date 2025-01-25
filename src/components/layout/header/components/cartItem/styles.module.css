@@ -1,0 +1,13 @@
+.cart_dropdown_item {
+  display: grid;
+  grid-template-columns: 116px 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 12px;
+}
+
+.add_to_cart_quantity {
+  width: 102px;
+  max-width: 102px;
+  min-height: 44px;
+  max-height: 44px;
+}

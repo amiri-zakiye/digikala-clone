@@ -51,7 +51,7 @@ const ProductStock = async () => {
               </div>
             </div>
           </div>
-          <ProductCartManager />
+          <ProductCartManager product={product} />
         </div>
       </div>
     </div>

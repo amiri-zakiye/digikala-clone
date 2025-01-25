@@ -1,10 +1,14 @@
 import { Product } from "@/types/product.types";
 
 export type CartState = {
-    count: number;
-    cartItems: { product: Product; quantity: number }[];
-}
-
+  count: number;
+  cartItems: { product: Product; quantity: number }[];
+  totalAmount: number
+};
 export type CartSlice = {
-    cart: CartState
-}
+  cart: CartState;
+};
+export type ProductCartItem = {
+  product: Product;
+  quantity: number;
+};

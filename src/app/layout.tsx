@@ -24,6 +24,7 @@ export default function RootLayout({
           <Header />
           {children}
         </StoreProvider>
+        <div id="modal-root" />
         <Icons />
       </body>
     </html>

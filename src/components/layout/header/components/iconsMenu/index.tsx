@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useAppSelector } from "@/lib/store/store";
-import { CartSlice, CartState } from "@/lib/store/slices/cart/cart.types";
 import { toFarsiNumber } from "@/utils/formatters";
-import { cartItems } from "@/lib/store/slices/cart/cartSlice";
 import styles from "./styles.module.css";
+import CartDropDown from "../cartDropDown";
+import { useCart } from "@/lib/store/hooks";
+import useCartDropDownToggle from "@/hooks/useCartDropDownToggle";
 
 const IconsMenu = () => {
-  const { count } = useAppSelector<CartSlice>(
-    (slice) => slice.cart
-  ) as CartState;
+  const { count } = useCart();
+  const { isDropdownVisible, displayCartDropdown, hideCartDropdown } =
+    useCartDropDownToggle();
 
   return (
     <nav className="flex items-center">
@@ -20,7 +20,11 @@ const IconsMenu = () => {
         <UserIcon />
       </Link>
       <div className="bg-neutral-200 mx-3 w-px h-[24px]" />
-      <div className="p-2 block relative">
+      <div
+        className="p-2 block relative"
+        onMouseEnter={() => displayCartDropdown()}
+        onMouseLeave={() => hideCartDropdown()}
+      >
         <CartIcon />
         {count > 0 && (
           <div
@@ -29,6 +33,7 @@ const IconsMenu = () => {
             {toFarsiNumber(count)}
           </div>
         )}
+        {count > 0 && isDropdownVisible && <CartDropDown />}
       </div>
     </nav>
   );
