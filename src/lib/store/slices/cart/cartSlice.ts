@@ -4,21 +4,28 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { CartState } from "./cart.types";
 
-const initialState = {
-  count: 0,
-  cartItems: [],
-  totalAmount: 0
-} satisfies CartState as CartState;
+const initialState = (() => {
+  const savedCart = localStorage.getItem("cart");
+  return savedCart
+    ? (JSON.parse(savedCart) as CartState)
+    : {
+        count: 0,
+        cartItems: [],
+        totalAmount: 0,
+      };
+})() satisfies CartState as CartState;
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    calculateTotalAmount : (state) => {
-        state.totalAmount = state.cartItems.reduce(
-            (total, item) => total + item.product.default_variant.price.selling_price * item.quantity,
-            0
-        );
+    calculateTotalAmount: (state) => {
+      state.totalAmount = state.cartItems.reduce(
+        (total, item) =>
+          total +
+          item.product.default_variant.price.selling_price * item.quantity,
+        0
+      );
     },
     addToCart: (state, action: PayloadAction<Product>) => {
       const { payload: newProduct } = action;
@@ -31,7 +38,7 @@ const cartSlice = createSlice({
         state.cartItems.push({ product: newProduct, quantity: 1 });
       }
       state.count += 1;
-      cartSlice.caseReducers.calculateTotalAmount(state)
+      cartSlice.caseReducers.calculateTotalAmount(state);
     },
     removeFromCart: (state, action: PayloadAction<Product>) => {
       const { id } = action.payload;
@@ -44,7 +51,7 @@ const cartSlice = createSlice({
         state.cartItems = state.cartItems.filter(
           (item) => item.product.id !== id
         );
-        cartSlice.caseReducers.calculateTotalAmount(state)
+        cartSlice.caseReducers.calculateTotalAmount(state);
       }
     },
   },
