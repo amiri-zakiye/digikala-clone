@@ -19,8 +19,8 @@ const ProductRating = ({
         </p>
       </div>
 
-      <div className="flex mr-1.5 items-center gap-1.5 bg-gradient-silver rounded-large">
-        <span className="flex item-center text-caption-strong pr-small pl-xSmall text-icon-high-emphasis rounded-lg whitespace-nowrap">
+      <div className="flex mr-1.5 items-center bg-gradient-silver ">
+        <span className="flex item-center text-caption-strong pr-1 pl-1 text-icon-high-emphasis rounded-lg whitespace-nowrap">
           ۱۱ دیدگاه
         </span>
         <div
