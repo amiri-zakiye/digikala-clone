@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ForwardedRef, useRef } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import {
