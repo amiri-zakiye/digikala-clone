@@ -6,12 +6,12 @@ import useQueryParameter from "../../hooks/queryParameter";
 import SortOption from "../sortOption";
 import { Option } from "../../products.type";
 
-const SortOptions = memo(({ options }: { options: Option[] }) => {
+const SortOptions = ({ options }: { options: Option[] }) => {
   const { defaultSort } = useShop();
   const { setQueryParam, getQueryParam } = useQueryParameter();
   const defaultSortState = getQueryParam("sort") || defaultSort;
   const [activeSortId, setActiveSortId] = useState(Number(defaultSortState));
-    
+
   const onClickHandler = (item: Option) => {
     setActiveSortId(Number(item.id));
     setQueryParam("sort", item.id.toString());
@@ -29,6 +29,6 @@ const SortOptions = memo(({ options }: { options: Option[] }) => {
       ))}
     </>
   );
-});
+};
 
-export default SortOptions;
+export default memo(SortOptions);

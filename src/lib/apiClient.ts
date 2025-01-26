@@ -34,11 +34,11 @@ class ApiClient {
     return this.client.get(url, options).json();
   }
 
-  async post<T>(url: string, json: any, options?: Options): Promise<T> {
+  async post<T>(url: string, json: JSON, options?: Options): Promise<T> {
     return this.client.post(url, { json, ...options }).json();
   }
 
-  async put<T>(url: string, json: any, options?: Options): Promise<T> {
+  async put<T>(url: string, json: JSON, options?: Options): Promise<T> {
     return this.client.put(url, { json, ...options }).json();
   }
 }

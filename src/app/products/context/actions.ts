@@ -2,7 +2,7 @@ import { Product } from "@/types/product.types";
 import { Action, Pager } from "./types";
 import { Filter } from "../products.type";
 
-export default (dispatch: React.ActionDispatch<[action: Action]>) => {
+const actions = (dispatch: React.ActionDispatch<[action: Action]>) => {
   return {
     appendProducts: (products: Product[], pager: Pager) => {
       dispatch({ type: "APPEND_PRODUCTS", payload: { products, pager } });
@@ -28,3 +28,4 @@ export default (dispatch: React.ActionDispatch<[action: Action]>) => {
     },
   };
 };
+export default actions;

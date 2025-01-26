@@ -24,5 +24,5 @@ export type MegaMenuContextRefsType = Pick<
 
 export type MegaMenuAction = {
   type: string;
-  payload: number | boolean;
+  payload: number | boolean | string;
 };

@@ -1,5 +1,5 @@
 import TrendingArticles from "./components/articles";
-import { Article, ArticlePosts } from "./components/articles/articles.types";
+import { ArticlePosts } from "./components/articles/articles.types";
 import BestSellersWidget from "./components/bestSellers";
 import { BestSellers } from "./components/bestSellers/bestsellers.types";
 import FullSliderWidget from "./components/fullSlider";

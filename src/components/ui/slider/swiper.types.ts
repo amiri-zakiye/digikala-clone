@@ -6,7 +6,7 @@ import Swiper from "swiper";
 export type SliderType = Swiper;
 
 export interface SliderProps {
-  children?: ReactElement[] | ReactElement;
+  children?: ReactElement[] | [ReactElement];
   slidesPerView?: number | "auto";
   loop?: boolean;
   pagination?: boolean;
@@ -17,8 +17,8 @@ export interface SliderProps {
     { slidesPerView: number; spaceBetween?: number }
   >;
   autoplay?: { delay: number; disableOnInteraction: boolean } | undefined;
-  thumbSwiper?: SliderType;
-  onSwiper?: Dispatch<SetStateAction<SliderType | undefined>>;
+  thumbSwiper?: SliderType | null;
+  onSwiper?: Dispatch<SetStateAction<SliderType | null>>;
   freeMode?: boolean;
   watchSlidesProgress?: boolean;
   className?: string;

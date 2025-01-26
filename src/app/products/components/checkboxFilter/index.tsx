@@ -32,7 +32,6 @@ const CheckboxFilter = ({
         <CheckBoxFilterOption
           key={option.id}
           option={option}
-          filterId={filterId}
           isChecked={activeCheckboxId === option.id.toString()}
           onClick={() => onClickHandler(option.id.toString())}
         />

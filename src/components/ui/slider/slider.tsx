@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ForwardedRef, ReactElement, useRef } from "react";
+import React, { ForwardedRef, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import {
@@ -11,7 +11,6 @@ import {
   Thumbs,
 } from "swiper/modules";
 import styles from "./slider.module.css";
-// @ts-ignore
 import "swiper/css";
 import { SliderProps } from "./swiper.types";
 
@@ -46,7 +45,7 @@ const Slider: React.FC<SliderProps> = ({
         slidesPerView={slidesPerView}
         loop={loop}
         onBeforeInit={(swiper) => {
-          if (navigation) swiperRef.current = swiper;
+          swiperRef.current = swiper;
         }}
         autoplay={autoplay}
         pagination={
@@ -68,13 +67,13 @@ const Slider: React.FC<SliderProps> = ({
         watchSlidesProgress={watchSlidesProgress}
         className={className}
       >
-        {React.Children.map(children, (child: ReactElement) => (
+        {React.Children.map(children, (child) => (
           <SwiperSlide
             style={
               slidesPerView === "auto" ? { width: "auto", height: "auto" } : {}
             }
             className={slidesPerView === "auto" ? "max-w-max" : ""}
-            key={child.key}
+            key={child?.key}
           >
             {child}
           </SwiperSlide>
@@ -88,7 +87,7 @@ const Slider: React.FC<SliderProps> = ({
 const SliderNavigation = ({
   swiperRef,
 }: {
-  swiperRef: ForwardedRef<SwiperType>;
+  swiperRef: React.RefObject<SwiperType | null>;
 }) => {
   return (
     <div
