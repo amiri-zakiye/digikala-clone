@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-
 import Icons from "@/components/ui/Icons";
 import Header from "@/components/layout/header";
 
 import "@/styles/globals.css";
 import { iranYekan, CubeFontIcon } from "@/styles/fonts";
 import StoreProvider from "@/lib/store/provider";
+import NavigationProgressBar from "@/components/ui/navigationProgressBar";
 
 export const metadata: Metadata = {
   title: "Digikala Next App",
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html dir="rtl">
       <body className={`${iranYekan.className} ${CubeFontIcon.className}`}>
+        <NavigationProgressBar />
         <StoreProvider>
           <Header />
           {children}
