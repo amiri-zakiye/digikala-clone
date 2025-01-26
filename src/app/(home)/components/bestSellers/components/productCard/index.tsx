@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import { toFarsiNumber } from "@/utils/formatters";
@@ -16,7 +17,7 @@ const BestSellersProductCard = ({
       href={`/product/${product.id}`}
     >
       <div className="rounded shrink-0 ml-3 w-[86px] h-[86px]">
-        <img
+        <Image
           className="w-full inline-block object-contain"
           width="86"
           height="86"

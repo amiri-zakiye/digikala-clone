@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { ReactNode, useState } from "react";
 import { FilterTypes } from "../../products.type";
 
@@ -40,7 +40,7 @@ const FilterLayout = <T extends FilterTypes>({
                   "w-[18px] h-[18px] mr-2 flex items-center justify-center"
                 }
               >
-                <img
+                <Image
                   src={filter.icon}
                   width={18}
                   height={18}

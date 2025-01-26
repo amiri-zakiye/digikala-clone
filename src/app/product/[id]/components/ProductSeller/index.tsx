@@ -1,8 +1,5 @@
 import { toFarsiNumber } from "@/utils/formatters";
-import {
-  ProductVariants,
-  ProductSeller as TProductSeller,
-} from "@/types/product.types";
+import { ProductVariants } from "@/types/product.types";
 import styles from "./styles.module.css";
 
 const ProductSeller = ({ variants }: { variants: ProductVariants }) => {

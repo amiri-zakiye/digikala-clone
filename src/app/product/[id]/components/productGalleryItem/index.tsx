@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { ProductGalleryItem as TProductGalleryItem } from "@/types/product.types";
 import styles from "./styles.module.css";
 
@@ -26,7 +27,7 @@ const ProductGalleryItem = ({
           isLast ? styles.blur : ""
         } cursor-pointer w-[72px] h-[72px] `}
       >
-        <img
+        <Image
           width={72}
           height={72}
           className={"object-contain"}

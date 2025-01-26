@@ -3,7 +3,11 @@ import { BestSellers } from "./bestsellers.types";
 import BestSellersProductCard from "./components/productCard";
 import BestSellersSectionHeader from "./components/sectionHeader";
 
-const BestSellersWidget = ({ data }: { data: BestSellers }) => {
+const BestSellersWidget: React.FC<{ data: BestSellers }> = ({
+  data,
+}: {
+  data: BestSellers;
+}) => {
   return (
     <section className={"container lg:px-4"}>
       <div

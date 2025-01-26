@@ -1,8 +1,9 @@
+import Image from "next/image";
 const ProductMainThumbnail =  ({imageUrl,title}: {imageUrl:string,title:string}) => {
 
   return (
     <>
-      <img src={imageUrl} alt={title} />
+      <Image width="800" height="800" src={imageUrl} alt={title} />
     </>
   );
 };

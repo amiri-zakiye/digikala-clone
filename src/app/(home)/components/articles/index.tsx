@@ -4,7 +4,11 @@ import ArticleSectionHeader from "./components/sectionHeader";
 
 const itemsCount = 4;
 
-const TrendingArticles = ({ data }: { data: ArticlePosts }) => {
+const TrendingArticles: React.FC<{ data: ArticlePosts }> = ({
+  data,
+}: {
+  data: ArticlePosts;
+}) => {
   return (
     <section className="container lg:px-4 pb-5">
       <ArticleSectionHeader />

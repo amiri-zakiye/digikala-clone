@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-import widgets from "../../../../../data/widgets"
+import widgets from "../../../../../data/widgets";
 
-export async function GET(_request: Request) {
-    return NextResponse.json(widgets);
+export async function GET() {
+  return NextResponse.json(widgets);
 }
-
-   

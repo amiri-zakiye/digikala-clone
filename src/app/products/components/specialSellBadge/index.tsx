@@ -1,3 +1,4 @@
+import Image from "next/image";
 const SpecialSellBadge = ({
   isBannerVisible,
 }: {
@@ -7,7 +8,7 @@ const SpecialSellBadge = ({
     <div className="flex items-center justify-start mb-1">
       <div className={`ml-1 w-[64px] h-[14px]`}>
         {isBannerVisible ? (
-          <img
+          <Image
             className="w-full inline-block object-contain"
             src="/SpecialSell.svg"
             width="64"
