@@ -4,13 +4,9 @@ import { RefObject, useEffect } from "react";
 const useInfiniteScroll = ({
   onIntersect,
   root,
-  rootMargin = "30px",
-  threshold = 0.1,
 }: {
   onIntersect: () => void;
   root: RefObject<Element>;
-  rootMargin?: string;
-  threshold?: number;
 }) => {
   useEffect(() => {
     const currentRoot = root.current;

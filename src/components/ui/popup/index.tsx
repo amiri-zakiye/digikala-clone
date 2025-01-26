@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import { ReactNode } from "react";
 
 const Popup = ({ children }: { children: ReactNode }) => {
-  const modalRoot = document.getElementById("modal-root")!!;
+  const modalRoot = document.getElementById("modal-root")!;
   return createPortal(
     <>
       <div className="fixed inset-0 bg-black/30 z-20" />

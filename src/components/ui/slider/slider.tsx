@@ -14,7 +14,6 @@ import styles from "./slider.module.css";
 // @ts-ignore
 import "swiper/css";
 import { SliderProps } from "./swiper.types";
-import { SwiperModule } from "swiper/types";
 
 const Slider: React.FC<SliderProps> = ({
   children,

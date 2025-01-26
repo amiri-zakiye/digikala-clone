@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import { useRef } from "react";
+import { MegaMenuAction } from "../context/types";
 
-export const useToggleMegaMenu = (dispatch: React.Dispatch<any>) => {
+export const useToggleMegaMenu = (dispatch: React.Dispatch<MegaMenuAction>) => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const displayMegaMenu = () => {

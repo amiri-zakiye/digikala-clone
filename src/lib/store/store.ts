@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 import CartSliceReducer from "./slices/cart/cartSlice";
-import { useSelector } from "react-redux";
 
 export const makeStore = () => {
   return configureStore({

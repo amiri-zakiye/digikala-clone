@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ProductCartItem } from "@/lib/store/slices/cart/cart.types";
 import styles from "./styles.module.css";
 import { toFarsiNumber } from "@/utils/formatters";
@@ -164,7 +165,7 @@ const CartItemRight = ({
     <div className="flex flex-col items-center">
       <Link className="relative" href={`/product/${product.id}`}>
         <div className={"w-[114px] h-[114px] object-contain"}>
-          <img
+          <Image
             className="w-full inline-block"
             src={product.images.main.url?.[0]}
             width="114"
@@ -181,7 +182,7 @@ const CartItemRight = ({
         <div className="flex items-center text-h5 py-2 mt-2 flex-col">
           <div className="ml-2 flex items-center justify-center w-[64px] h-[14px]">
             {product.default_variant.price.discount_percent > 0 && (
-              <img
+              <Image
                 className="w-full inline-block object-contain"
                 src="/SpecialSell.svg"
                 width="64"
