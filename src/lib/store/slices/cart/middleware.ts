@@ -1,3 +1,4 @@
+"use client";
 const saveCartToLocalStorage = (storeAPI) => (next) => (action) => {
   const result = next(action);
 

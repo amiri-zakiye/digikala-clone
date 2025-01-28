@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const __digicdn_js_challenge = "72cb04557a09468d25aee5662dc86da3a99b0aa4";
+const __digicdn_js_challenge = "24127110b24f73fd18b97f7e4e2138ab8669185c";
 
 const nextConfig: NextConfig = {
   images: {
@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
       {
         source: "/product/v2/:id",
         destination: `https://api.digikala.com/v2/product/:id/?__digicdn_js_challenge=${__digicdn_js_challenge}`,
+      },
+      {
+        source: "/comments/:productId",
+        destination: `https://api.digikala.com/v1/rate-review/products/:productId/?__digicdn_js_challenge=${__digicdn_js_challenge}`,
       },
     ];
   },

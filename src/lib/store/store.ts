@@ -1,3 +1,4 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 import CartSliceReducer from "./slices/cart/cartSlice";
 import saveCartToLocalStorage from "./slices/cart/middleware";

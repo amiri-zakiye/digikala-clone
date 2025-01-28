@@ -64,8 +64,12 @@ export default {
           "delivery-jet-expansion": "#1028ff",
           "rating-0-2": "#f9bc00",
           "neutral-hint": "#81858b",
+          warning: "#f9a825",
+          disable: "#e0e0e2",
         },
         "hint-object-error": "var(--hint-object-error)",
+        "hint-success": "#2e7b32",
+        "hint-success-light": "rgba(76, 175, 80, 0.1)"
       },
       spacing: {
         "1": "4px",
