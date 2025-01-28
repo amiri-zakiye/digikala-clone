@@ -47,7 +47,7 @@ const Comment = ({
         <ProductStars rate={rate} />
       </div>
       <div className="gap-y-3 flex flex-col">
-        <p className="font-normal text-body-1 text-neutral-900 mb-1 break-words">
+        <p className="font-normal text-body text-neutral-900 mb-1 break-words">
           {body}
         </p>
       </div>

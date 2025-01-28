@@ -9,7 +9,7 @@ const ProductReviews = async () => {
 
   return (
     <div className="flex gap-3 w-full">
-      <div className="w-[260px] min-w-[260px]">
+      <div className="w-[260px] min-w-[260px] h-min sticky top-0">
         <ProductReviewsSectionTitle />
         <ProductRatingOverview
           ratingCount={rating.count ?? 0}
