@@ -4,7 +4,6 @@ import { ShopProvider } from "./context";
 import FiltersSidebar from "./components/filtersSidebar";
 import SortTopbar from "./components/sortTopBar";
 
-export const dynamic = 'force-dynamic'
 const ProductsPage = async () => {
   const { data } = await getProducts(1);
   const { products, filters, pager } = data;
