@@ -23,8 +23,8 @@ const ProductAddedToCartAlert = ({
           <div className="flex items-center gap-1">
             <div className="styles_successAnimation__XSW3E">
               <DotLottieReact
-                width={25}
-                height={25}
+                width={10}
+                height={10}
                 autoplay={true}
                 src="/success.lottie"
               />

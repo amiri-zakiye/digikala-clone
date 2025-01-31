@@ -21,7 +21,7 @@ const ProductSeller = ({ variants }: { variants: ProductVariants }) => {
           </svg>
           <div>
             <p className="text-neutral-700  mb-2 text-subtitle-strong">
-              {seller.title}
+              {seller?.title}
             </p>
             <div className="flex w-full">
               <div className="w-full flex items-center content-center text-body-2">
@@ -40,10 +40,10 @@ const ProductSeller = ({ variants }: { variants: ProductVariants }) => {
                   <p
                     className="whitespace-nowrap text-body2-strong"
                     style={{
-                      color: seller.grade.color,
+                      color: seller?.grade.color,
                     }}
                   >
-                    {seller.grade.label}
+                    {seller?.grade.label}
                   </p>
                 </div>
               </div>
