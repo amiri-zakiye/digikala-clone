@@ -6,6 +6,7 @@ import { getMegaMenu } from "@/app/apiLayer";
 import MegaMenuSideNav from "../megaMenuSideNav";
 import MegaMenuBody from "../megaMenuBody";
 
+export const dynamic = "force-dynamic"
 const MegaMenu = () => {
   const { isMegaMenuVisible, displayMegaMenu, hideMegaMenu, megaMenuHeight } =
     useMegaMenuContext();
