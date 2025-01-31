@@ -1,6 +1,6 @@
 import { getProductDataWithParams } from "../../apiLayer";
 import ProductFeatures from "../productFeatures";
-import ProductRating from "../productRating";
+import ProductRating from "../ProductRating";
 
 const ProductSpecifications = async() => {
 
