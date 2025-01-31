@@ -4,7 +4,7 @@ import Popup from "@/components/ui/popup";
 import { addToCart } from "@/lib/store/slices/cart/cartSlice";
 import { Product } from "@/types/product.types";
 import { useState } from "react";
-import ProductAddedToCartAlert from "../productAddedToCartAlert";
+import ProductAddedToCartAlert from "../ProductAddedToCartAlert";
 import { useAppDispatch } from "@/lib/store/hooks";
 
 const ProductCartManager = ({ product }: { product: Product }) => {
