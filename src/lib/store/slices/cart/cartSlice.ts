@@ -5,7 +5,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { CartState } from "./cart.types";
 
 const initialState = (() => {
-  const savedCart = localStorage.getItem("cart");
+  const savedCart = typeof window !== 'undefined' ? localStorage.getItem("cart") : ""
   return savedCart
     ? (JSON.parse(savedCart) as CartState)
     : {

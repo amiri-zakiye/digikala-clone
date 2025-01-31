@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useReducer, useContext, createContext, useMemo } from "react";
+import React, { useReducer, useContext, createContext, useMemo, Suspense } from "react";
 import { reducer } from "./reducer";
 import { ShopContextType, State } from "./types";
 import getShopActions from "./actions"
@@ -24,7 +24,9 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return (
         <>
             <shopContext.Provider value={{...memoizedState}}>
+                <Suspense fallback={<></>}>
                 {children}
+                </Suspense>
             </shopContext.Provider>
         </>
     )
