@@ -1,6 +1,7 @@
 import { getWidgets } from "./apiLayer/home";
 import { widgetTypeMap } from "./home.types";
 
+export const dynamic = 'force-dynamic'
 export default async function Home() {
   const { widgets } = await getWidgets();
 
