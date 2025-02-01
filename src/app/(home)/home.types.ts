@@ -14,7 +14,9 @@ export type Widget =
   | { name: "incredible_offer_products_cart"; data: IncredibleOffer };
 
 export type ApiResponse = {
-  widgets: Widget[];
+  data: {
+    widgets: Widget[];
+  };
 };
 
 export const widgetTypeMap: {

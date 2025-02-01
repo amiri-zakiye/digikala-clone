@@ -30,6 +30,14 @@ const nextConfig: NextConfig = {
         source: "/comments/:productId",
         destination: `https://api.digikala.com/v1/rate-review/products/:productId/`,
       },
+      {
+        source: "/api/megaMenu",
+        destination: `https://api.digikala.com/v1/dictionaries/?types%5B3%5D=mega_menu&types%5B5%5D=category_tree&hashes%5B3%5D=&hashes%5B5%5D=`,
+      },
+      {
+        source: "/api/widgets",
+        destination: `https://api.digikala.com/v2/`,
+      },
     ];
   },
 };

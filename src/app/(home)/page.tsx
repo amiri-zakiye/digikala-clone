@@ -2,7 +2,8 @@ import { getWidgets } from "./apiLayer/home";
 import { widgetTypeMap } from "./home.types";
 
 export default async function Home() {
-  const { widgets } = await getWidgets();
+  const { data } = await getWidgets();
+  const { widgets } = data;
 
   return (
     <main className="flex flex-col gap-y-4">
