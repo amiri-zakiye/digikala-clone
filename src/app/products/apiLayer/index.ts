@@ -1,3 +1,4 @@
+"use server"
 import { apiClient } from "@/lib/apiClient";
 import { ReadonlyURLSearchParams } from "next/navigation";
 import { ShopResponse } from "../products.type";
