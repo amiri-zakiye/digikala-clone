@@ -13,7 +13,7 @@ const MegaMenu = () => {
 
   useEffect(() => {
     getMegaMenu().then((data: Category[]) => {
-      setMegaMenuData(data);
+      setMegaMenuData(data.data[0].data.data);
     });
   }, []);
 

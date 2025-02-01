@@ -7,6 +7,6 @@ export const getProducts = async (
   searchParams: ReadonlyURLSearchParams | undefined = undefined
 ) => {
   return apiClient.get<ShopResponse>(
-    `products/v1/?page=${page}&${searchParams}`
+    `v1/search/?page=${page}&${searchParams}`
   );
-};
+}
