@@ -40,7 +40,7 @@ const ProductGrid = ({
   useEffect(() => {
     (async () => {
       resetProducts();
-      const { data } = await getProducts(1, searchParams);
+      const { data } = await getProducts(1, searchParams.toString());
       const {
         products: newProducts,
         pager: newPager,
@@ -59,7 +59,7 @@ const ProductGrid = ({
       ) {
         setloading(true);
         const { current_page } = pager;
-        const { data } = await getProducts(current_page + 1, searchParams);
+        const { data } = await getProducts(current_page + 1, searchParams.toString());
         const { products: newProducts, pager: newPager } = data;
         appendProducts(newProducts, newPager);
       }

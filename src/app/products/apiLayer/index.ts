@@ -5,7 +5,7 @@ import { ShopResponse } from "../products.type";
 
 export const getProducts = async (
   page: number,
-  searchParams: ReadonlyURLSearchParams | undefined = undefined
+  searchParams: string | undefined = undefined
 ) => {
   return apiClient.get<ShopResponse>(
     `v1/search/?page=${page}&${searchParams}`
