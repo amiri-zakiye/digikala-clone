@@ -4,16 +4,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { CartState } from "./cart.types";
 
-const initialState = (() => {
-  const savedCart = localStorage.getItem("cart")
-  return savedCart
-    ? (JSON.parse(savedCart) as CartState)
-    : {
-        count: 0,
-        cartItems: [],
-        totalAmount: 0,
-      };
-})() satisfies CartState as CartState;
+const initialState = {
+  count: 0,
+  cartItems: [],
+  totalAmount: 0,
+} satisfies CartState as CartState;
 
 const cartSlice = createSlice({
   name: "cart",
