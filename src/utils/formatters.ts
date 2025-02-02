@@ -9,7 +9,7 @@ export const toFarsiNumber = (num : string | number) => {
 export const getMaxTimer = (products: Product[]) => {
     products.map(item => console.log(item.default_variant.price.timer))
     console.log(Math.max(...products.map(product => product.default_variant.price.timer)))
-    return Math.max(...products.map(product => product.default_variant.price.timer)) || 0;
+    return Math.max(...products.map(product => product.default_variant.price.timer)) || 5900;
 };
 
 export function replace(str: string, valuesToReplace: string[], replacement: string) {
