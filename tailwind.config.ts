@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/theme";
+const {heroui} = require("@heroui/react");
 import type { Config } from "tailwindcss";
 
 export default {
@@ -7,7 +7,7 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./data/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|ripple|spinner).js",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     container: {
@@ -80,5 +80,5 @@ export default {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [heroui()],
 } satisfies Config;

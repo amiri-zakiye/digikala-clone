@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import { iranYekan, CubeFontIcon } from "@/styles/fonts";
 import StoreProvider from "@/lib/store/provider";
 import NavigationProgressBar from "@/components/ui/navigationProgressBar";
+import { HeroUIProvider } from "@heroui/react";
 
 export const metadata: Metadata = {
   title: "Digikala Next App",
@@ -21,10 +22,12 @@ export default function RootLayout({
     <html dir="rtl">
       <body className={`${iranYekan.className} ${CubeFontIcon.className}`}>
         <NavigationProgressBar />
-        <StoreProvider>
-          <Header />
-          {children}
-        </StoreProvider>
+        <HeroUIProvider>
+          <StoreProvider>
+            <Header />
+            {children}
+          </StoreProvider>
+        </HeroUIProvider>
         <div id="modal-root" />
         <Icons />
       </body>
