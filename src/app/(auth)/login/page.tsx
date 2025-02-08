@@ -1,27 +1,23 @@
 import { login } from "./actions";
 import Input from "@/components/ui/input";
 import { Button, Link } from "@heroui/react";
+import LoginForm from "../components/loginForm";
 
 const Login = () => {
   return (
     <>
-      <h1 className="text-body-1 border-b border-neutral-100 pb-3 mb-3">
+      <h1 className="text-body-1 border-b border-neutral-100 py-3 mb-3 pr-5">
         ورود به دیجی کالا
       </h1>
-      <Input label="ایمیل" type="email" />
-      <Input label="رمزعبور" type="password" />
-      <Button
-        formAction={login}
-        color="danger"
-        radius="sm"
-        type="submit"
-        className="w-full h-16 text-lg"
-      >
-        ورود
-      </Button>
-      <p>
+      <LoginForm />
+      <p className=" pb-3 pr-5">
         حساب کاربری ندارید؟
-        <Link className="text-primary-700 mr-1 font-bold text-lg" href="/register">ایجاد کنید</Link>
+        <Link
+          className="text-primary-700 mr-1 font-bold text-lg"
+          href="/register"
+        >
+          ایجاد کنید
+        </Link>
       </p>
     </>
   );
