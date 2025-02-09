@@ -19,7 +19,64 @@ const Icons = () => {
           clipRule="evenodd"
         ></path>
       </symbol>
-
+      <symbol id="time" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fillRule="evenodd"
+          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm1-14v5.586l3.707 3.707-1.414 1.414-4-4A1 1 0 0111 12V6h2z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
+      <symbol
+        id="cardGift"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fillRule="evenodd"
+          d="M23 6a3 3 0 00-3-3H4a3 3 0 00-3 3v12a3 3 0 003 3h16a3 3 0 003-3V6zM4 5h6v3.17a3 3 0 00-2.176 5.59L6.086 15.5 7.5 16.914l2.5-2.5V19H4a1 1 0 01-1-1v-4h2v-2H3V6a1 1 0 011-1zm8 9.414V19h8a1 1 0 001-1v-4h-4v-2h4V6a1 1 0 00-1-1h-8v3.17a3 3 0 012.176 5.59l1.738 1.74-1.414 1.414-2.5-2.5zM12 11a1 1 0 102 0 1 1 0 00-2 0zm-2 0a1 1 0 10-2 0 1 1 0 002 0z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
+      <symbol
+        id="street"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fillRule="evenodd"
+          d="M13 1h-2v2.5H5a1 1 0 00-.928 1.371L4.923 7l-.851 2.129A1 1 0 005 10.5h6v1H6a1 1 0 00-.928.629l-1 2.5a1 1 0 000 .742l1 2.5A1 1 0 006 18.5h5v4h2v-4h6a1 1 0 00.928-1.371L19.078 15l.851-2.129A1 1 0 0019 11.5h-6v-1h5a1 1 0 00.928-.629l1-2.5a1 1 0 000-.742l-1-2.5A1 1 0 0018 3.5h-5V1zM6.928 6.629L6.477 5.5h10.846l.6 1.5-.6 1.5H6.477l.451-1.129a1 1 0 000-.742zM6.677 13.5h10.846l-.451 1.129a1 1 0 000 .742l.451 1.129H6.677l-.6-1.5.6-1.5z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
+      <symbol
+        id="registerationSignOut"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fillRule="evenodd"
+          d="M16 15h-2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v2h2V7a4 4 0 00-4-4H6a4 4 0 00-4 4v10a4 4 0 004 4h6a4 4 0 004-4v-2zm-9-2h12.586l-2.293 2.293 1.414 1.414 4-4a1 1 0 000-1.414l-4-4-1.414 1.414L19.586 11H7v2z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
+      <symbol id="order" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fillRule="evenodd"
+          d="M12 2a5 5 0 014.995 4.783L17 7h2a1 1 0 01.993.883L20 8v11a3 3 0 01-2.824 2.995L17 22H7a3 3 0 01-2.995-2.824L4 19V8a1 1 0 01.883-.993L5 7h2a5 5 0 015-5zm6 7h-1v2h-2V9H9v2H7V9H6v10a1 1 0 00.77.974l.113.02L7 20h10a1 1 0 00.993-.883L18 19V9zM9.005 6.824A3 3 0 0115 7H9l.005-.176z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
+      <symbol
+        id="registerationSignIn"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fillRule="evenodd"
+          d="M16 15h-2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v2h2V7a4 4 0 00-4-4H6a4 4 0 00-4 4v10a4 4 0 004 4h6a4 4 0 004-4v-2zm6-4H9.414l2.293-2.293-1.414-1.414-4 4a1 1 0 000 1.414l4 4 1.414-1.414L9.414 13H22v-2z"
+          clipRule="evenodd"
+        ></path>
+      </symbol>
       <symbol
         id="electronic"
         xmlns="http://www.w3.org/2000/svg"
