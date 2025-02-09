@@ -20,6 +20,7 @@ export async function signup(prevState: any, formData: FormData) {
     };
   }
 
-  revalidatePath("/", "layout");
-  redirect("/");
+  return {
+    success: "برای تکمیل ثبت نام ایمیل خود را تایید کنید",
+  };
 }

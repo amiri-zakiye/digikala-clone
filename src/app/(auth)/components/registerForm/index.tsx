@@ -32,6 +32,9 @@ const RegisterForm = () => {
       {supabaseState?.errors && (
         <p className="my-2 text-primary-700">{supabaseState.errors}</p>
       )}
+      {supabaseState?.success && (
+        <p className="my-2 text-hint-success">{supabaseState.success}</p>
+      )}
       <SubmitButton
         disabled={pending}
         label={pending ? <Spinner color="default" /> : "ثبت نام"}
