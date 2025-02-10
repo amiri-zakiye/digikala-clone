@@ -1,6 +1,6 @@
 import { getUser } from "@/utils/supabase/user";
-import { Link } from "@heroui/react";
 import LoginButton from "../loginButton";
+import Link from "next/link";
 
 const GoToDasboard = async () => {
   const { data, error } = await getUser();
