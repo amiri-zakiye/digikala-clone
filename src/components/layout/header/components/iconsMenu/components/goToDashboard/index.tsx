@@ -1,4 +1,4 @@
-import { getUser } from "@/utils/supabase/getUser";
+import { getUser } from "@/utils/supabase/user";
 import { Link } from "@heroui/react";
 import LoginButton from "../loginButton";
 
