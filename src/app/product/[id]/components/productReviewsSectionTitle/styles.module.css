@@ -1,0 +1,9 @@
+.title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--primary-700);
+  width: 7rem;
+  height: 0.25rem;
+  margin-top: 0.5rem;
+}

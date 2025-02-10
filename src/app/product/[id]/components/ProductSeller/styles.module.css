@@ -1,0 +1,11 @@
+.divider::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: var(--neutral-200);
+  width: 1px;
+  content: " ";
+  height: calc(100% - 10px);
+}
