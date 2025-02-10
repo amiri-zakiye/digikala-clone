@@ -1,7 +1,7 @@
 import Slider from "@/components/ui/slider/slider";
 import styles from "./styles.module.css";
 import { getMaxTimer } from "@/utils/formatters";
-import { IncredibleOffer } from "./incredibleOffer.types";
+import { IncredibleOffer } from "./types";
 import ProductCard from "./components/productCard";
 import IncredibleOfferBannerSlide from "./components/bannerSlide";
 

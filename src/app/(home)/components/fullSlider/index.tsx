@@ -1,6 +1,6 @@
 import Slider from "@/components/ui/slider/slider";
 import LinkedImage from "@/components/ui/linkedImage";
-import { FullSlider } from "./fullSlider.types";
+import { FullSlider } from "./types";
 
 const FullSliderWidget = ({data}: { data: FullSlider[] }) => {
     return (

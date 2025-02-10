@@ -1,6 +1,6 @@
-import IncredibleOfferImage from "../bannerImage";
-import IncredibleOfferViewMore from "../viewMore";
-import IncredibleOfferCountDown from "../countdown";
+import IncredibleOfferImage from "./components/bannerImage";
+import IncredibleOfferViewMore from "./components/viewMore";
+import IncredibleOfferCountDown from "./components/countdown";
 
 const IncredibleOfferBannerSlide = ({timer} : {timer:number})  => {
     return (

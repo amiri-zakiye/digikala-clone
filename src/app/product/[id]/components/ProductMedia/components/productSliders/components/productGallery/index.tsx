@@ -1,5 +1,5 @@
 import { ProductGallery as TProductGallery } from "@/types/product.types";
-import ProductGalleryItem from "../productGalleryItem";
+import ProductGalleryItem from "./components/productGalleryItem";
 
 const ProductGallery = ({
   items,

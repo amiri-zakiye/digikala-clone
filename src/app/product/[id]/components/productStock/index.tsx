@@ -1,7 +1,7 @@
 import DiscountBadge from "@/components/features/product/discountBadge";
 import { toFarsiNumber } from "@/utils/formatters";
 import styles from "./styles.module.css";
-import ProductSeller from "../ProductSeller";
+import ProductSeller from "../productSeller";
 import { getProductDataWithParams } from "../../apiLayer";
 import ProductCartManager from "../productCartManager";
 

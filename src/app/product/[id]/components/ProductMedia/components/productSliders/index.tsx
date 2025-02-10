@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import ProductGallery from "../productGallery";
-import ProductPopOver from "../productPopOver";
+import ProductGallery from "./components/productGallery";
+import ProductPopOver from "./components/productPopOver";
 import { ProductGallery as TProductGallery } from "@/types/product.types";
 
 const ProductSliders = ({ items }: { items?: TProductGallery }) => {

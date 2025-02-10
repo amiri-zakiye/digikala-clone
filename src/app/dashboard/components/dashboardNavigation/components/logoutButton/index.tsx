@@ -1,5 +1,5 @@
 "use client";
-import { signOut } from "@/utils/supabase/user";
+import { signOut } from "@/lib/supabase/user";
 
 const LogoutButton = () => {
 

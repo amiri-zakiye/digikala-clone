@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Article } from "../../articles.types";
+import { Article } from "../../types";
 
 const ArticleCard = ({magazine} : {magazine: Article}) => {
     return (

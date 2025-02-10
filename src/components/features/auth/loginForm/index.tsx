@@ -1,6 +1,6 @@
 "use client";
 import { Input, Spinner } from "@heroui/react";
-import { login } from "../../login/actions";
+import { login } from "../../../../app/(auth)/login/actions";
 import SubmitButton from "../submitButton";
 import { useActionState } from "react";
 

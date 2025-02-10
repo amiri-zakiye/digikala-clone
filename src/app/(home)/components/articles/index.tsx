@@ -1,4 +1,4 @@
-import { ArticlePosts } from "./articles.types";
+import { ArticlePosts } from "./types";
 import ArticleCard from "./components/articleCard";
 import ArticleSectionHeader from "./components/sectionHeader";
 

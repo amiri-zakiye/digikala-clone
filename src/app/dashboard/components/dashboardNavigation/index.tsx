@@ -1,6 +1,6 @@
 import Link from "next/link";
 import navItems, { type NavItem } from "../../../../../data/dashboardNavItems";
-import LogoutButton from "../logoutButton";
+import LogoutButton from "./components/logoutButton";
 
 const DasboardNavigation = () => {
   return (

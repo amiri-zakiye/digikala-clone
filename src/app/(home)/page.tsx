@@ -1,5 +1,5 @@
-import { getWidgets } from "./apiLayer/home";
-import { widgetTypeMap } from "./home.types";
+import { getWidgets } from "./apiLayer";
+import { widgetTypeMap } from "./types";
 
 export default async function Home() {
   const { data } = await getWidgets();

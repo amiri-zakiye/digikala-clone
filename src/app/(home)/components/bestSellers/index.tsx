@@ -1,5 +1,5 @@
 import { Product } from "@/types/product.types";
-import { BestSellers } from "./bestsellers.types";
+import { BestSellers } from "./types";
 import BestSellersProductCard from "./components/productCard";
 import BestSellersSectionHeader from "./components/sectionHeader";
 

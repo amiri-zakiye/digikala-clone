@@ -1,6 +1,6 @@
-import ProductMainThumbnail from "../productMainThumbnail";
+import ProductMainThumbnail from "./components/productMainThumbnail";
 import { getProductDataWithParams } from "../../apiLayer";
-import ProductSliders from "../productSliders";
+import ProductSliders from "./components/productSliders";
 
 const ProductMedia = async () => {
   const { images, title_fa } = await getProductDataWithParams();

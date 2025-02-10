@@ -1,11 +1,11 @@
 import TrendingArticles from "./components/articles";
-import { ArticlePosts } from "./components/articles/articles.types";
+import { ArticlePosts } from "./components/articles/types";
 import BestSellersWidget from "./components/bestSellers";
-import { BestSellers } from "./components/bestSellers/bestsellers.types";
+import { BestSellers } from "./components/bestSellers/types";
 import FullSliderWidget from "./components/fullSlider";
-import { FullSlider } from "./components/fullSlider/fullSlider.types";
+import { FullSlider } from "./components/fullSlider/types";
 import IncredibleOfferWidget from "./components/incredibleOffer";
-import { IncredibleOffer } from "./components/incredibleOffer/incredibleOffer.types";
+import { IncredibleOffer } from "./components/incredibleOffer/types";
 
 export type Widget =
   | { name: "best_selling_products_ordered"; data: BestSellers }

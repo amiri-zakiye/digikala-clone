@@ -2,7 +2,7 @@ import { Product } from "@/types/product.types";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Link from "next/link";
 import styles from "./styles.module.css";
-import CloseProductAddedToCart from "../CloseProductAddedToCartAlert";
+import CloseProductAddedToCart from "../closeProductAddedToCartAlertButton";
 import Image from "next/image";
 
 const ProductAddedToCartAlert = ({

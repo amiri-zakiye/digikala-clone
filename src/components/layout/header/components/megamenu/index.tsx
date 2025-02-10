@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useMegaMenuContext } from "@/components/layout/header/context";
 import { Category } from "./types";
-import { getMegaMenu } from "@/app/apiLayer";
+import { getMegaMenu } from "@/apiLayer";
 import MegaMenuSideNav from "../megaMenuSideNav";
 import MegaMenuBody from "../megaMenuBody";
 

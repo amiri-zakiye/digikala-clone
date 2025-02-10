@@ -3,7 +3,7 @@ import ProductStock from "./components/productStock";
 import ProductSpecifications from "./components/productSpecifications";
 import styles from "./styles.module.css";
 import { pageContext } from "@/utils/serverContext";
-import ProductMedia from "./components/ProductMedia";
+import ProductMedia from "./components/productMedia";
 import ProductReviews from "./components/productReviews";
 
 const ProductPage = pageContext.Wrapper(async () => {

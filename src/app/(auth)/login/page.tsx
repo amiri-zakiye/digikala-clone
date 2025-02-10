@@ -1,5 +1,5 @@
 import { Link } from "@heroui/react";
-import LoginForm from "../components/loginForm";
+import LoginForm from "../../../components/features/auth/loginForm";
 
 const Login = () => {
   return (
