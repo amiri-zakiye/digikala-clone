@@ -1,9 +1,9 @@
 import DiscountBadge from "@/components/features/product/discountBadge";
 import { toFarsiNumber } from "@/utils/formatters";
 import styles from "./styles.module.css";
-import ProductSeller from "../productSeller";
+import ProductSeller from "./components/productSeller";
 import { getProductDataWithParams } from "../../apiLayer";
-import ProductCartManager from "../productCartManager";
+import ProductCartManager from "./components/productCartManager";
 
 const ProductStock = async () => {
   const product = await getProductDataWithParams();

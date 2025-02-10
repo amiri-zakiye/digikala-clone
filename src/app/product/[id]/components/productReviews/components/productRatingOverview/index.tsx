@@ -1,5 +1,5 @@
 import { toFarsiNumber } from "@/utils/formatters";
-import ProductStars from "../productStars";
+import ProductStars from "@/components/features/product/productStars";
 
 const ProductRatingOverview = ({
   ratingCount,

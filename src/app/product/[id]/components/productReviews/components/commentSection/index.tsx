@@ -1,7 +1,7 @@
 import { pageContext } from "@/utils/serverContext";
-import { getComments } from "../../apiLayer";
-import SortComments from "../sortComments";
-import Comments from "../comments";
+import { getComments } from "@/app/product/[id]/apiLayer";
+import SortComments from "./components/sortComments";
+import Comments from "./components/comments";
 
 const CommentSection = async () => {
   const { params } = await pageContext.get();

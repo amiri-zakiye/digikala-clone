@@ -3,7 +3,7 @@
 import { apiClient } from "@/lib/apiClient";
 import { Product } from "@/types/product.types";
 import { pageContext } from "@/utils/serverContext";
-import { CommentApi } from "../components/commentSection/comment.types";
+import { CommentApi } from "@/app/product/[id]/components/productReviews/components/commentSection/types";
 
 export const getProductData = async (id: string | number) => {
   const {data} = (await apiClient.get(`v2/product/${id}/`, {

@@ -1,8 +1,8 @@
 import { getProductDataWithParams } from "../../apiLayer";
-import CommentSection from "../commentSection";
-import ProductRatingOverview from "../productRatingOverview";
-import ProductReviewsSectionTitle from "../productReviewsSectionTitle";
-import RateCallToAction from "../rateCallToAction";
+import CommentSection from "./components/commentSection";
+import ProductRatingOverview from "./components/productRatingOverview";
+import ProductReviewsSectionTitle from "./components/productReviewsSectionTitle";
+import RateCallToAction from "./components/rateCallToAction";
 
 const ProductReviews = async () => {
   const { rating, data_layer } = await getProductDataWithParams();
