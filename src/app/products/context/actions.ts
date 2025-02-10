@@ -1,6 +1,6 @@
 import { Product } from "@/types/product.types";
 import { Action, Pager } from "./types";
-import { Filter } from "../products.type";
+import { Filter } from "../types";
 
 const actions = (dispatch: React.ActionDispatch<[action: Action]>) => {
   return {

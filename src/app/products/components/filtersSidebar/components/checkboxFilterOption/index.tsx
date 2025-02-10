@@ -1,6 +1,6 @@
 "use client";
 import CheckBox from "@/components/ui/checkbox";
-import { Option } from "../../products.type";
+import { Option } from "../../../../types";
 
 const CheckBoxFilterOption = ({
   option,

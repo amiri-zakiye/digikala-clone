@@ -1,4 +1,4 @@
-import Filter from "../filter";
+import Filter from "./components/filter";
 import { getProducts } from "../../apiLayer";
 
 

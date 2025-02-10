@@ -1,4 +1,4 @@
-import { FilterTypes } from "../../products.type";
+import { FilterTypes } from "../../../../types";
 import CheckboxFilter from "../checkboxFilter";
 import FilterLayout from "../filterLayout";
 import SwitcherFilter from "../switcherFilter";

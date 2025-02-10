@@ -1,7 +1,7 @@
 import { Product } from "@/types/product.types";
 import { Dispatch } from "react";
-import { Filter } from "../products.type";
-import { Option } from "../products.type";
+import { Filter } from "../types";
+import { Option } from "../types";
 
 export type Pager = {
   current_page: number;

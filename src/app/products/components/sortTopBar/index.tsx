@@ -1,6 +1,6 @@
 import { getProducts } from "../../apiLayer";
-import SortOptions from "../sortOptions";
-import TotalProductCount from "../totalProductCount";
+import SortOptions from "./components/sortOptions";
+import TotalProductCount from "./components/totalProductCount";
 
 const SortTopbar = async () => {
   const { data } = await getProducts(1);

@@ -1,7 +1,7 @@
 "use client";
 import Switcher from "@/components/ui/switcher/switcher";
 import { useEffect, useState } from "react";
-import useQueryParameter from "../../hooks/queryParameter";
+import useQueryParameter from "../../../../hooks/queryParameter";
 
 const SwitcherFilter = ({ filterId }: { filterId: string }) => {
   const { setQueryParam, getQueryParam } = useQueryParameter();

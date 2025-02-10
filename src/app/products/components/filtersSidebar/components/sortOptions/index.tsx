@@ -3,7 +3,7 @@
 import { memo, useState } from "react";
 import { useShop } from "@/app/products/context";
 import useQueryParameter from "../../hooks/queryParameter";
-import SortOption from "../sortOption";
+import SortOption from "../../../sortTopBar/components/sortOption";
 import { Option } from "../../products.type";
 
 const SortOptions = ({ options }: { options: Option[] }) => {

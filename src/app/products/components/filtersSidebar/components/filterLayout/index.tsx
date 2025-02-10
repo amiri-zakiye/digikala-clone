@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
-import { FilterTypes } from "../../products.type";
+import { FilterTypes } from "../../../../types";
 
 const FilterWrapper = ({ children }: { children: ReactNode }) => {
   return (

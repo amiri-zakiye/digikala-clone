@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import useQueryParameter from "../../hooks/queryParameter";
+import useQueryParameter from "../../../../hooks/queryParameter";
 import CheckBoxFilterOption from "../checkboxFilterOption";
 import { CheckBoxFilter as CheckBoxFilterType } from "./checkboxFilter.type";
 

@@ -1,4 +1,4 @@
-import { Option } from "../../products.type";
+import { Option } from "../../../../types";
 
 export type CheckBoxFilter = {
   type: "checkbox";

@@ -6,9 +6,9 @@ import { useSearchParams } from "next/navigation";
 import { Product } from "@/types/product.types";
 import { getProducts } from "../../apiLayer";
 import useInfiniteScroll from "../../hooks/infiniteScroll";
-import ProductItem from "../productItem";
-import ProductsShimmer from "../productsShimmer";
-import { Filter } from "../../products.type";
+import ProductItem from "./components/productItem";
+import ProductsShimmer from "./components/productsShimmer";
+import { Filter } from "../../types";
 import styles from "@/app/products/styles.module.css";
 
 const ProductGrid = ({

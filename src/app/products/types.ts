@@ -1,6 +1,6 @@
 import { Product } from "@/types/product.types"
-import { CheckBoxFilter } from "./components/checkboxFilter/checkboxFilter.type"
-import { SwitchFilter } from "./components/switcherFilter/switcherFilter.types"
+import { CheckBoxFilter } from "./components/filtersSidebar/components/checkboxFilter/checkboxFilter.type"
+import { SwitchFilter } from "./components/filtersSidebar/components/switcherFilter/switcherFilter.types"
 import { Pager } from "./context/types"
 
 export type Filter = {

@@ -1,6 +1,6 @@
 "use server"
 import { apiClient } from "@/lib/apiClient";
-import { ShopResponse } from "../products.type";
+import { ShopResponse } from "../types";
 
 export const getProducts = async (
   page: number,
