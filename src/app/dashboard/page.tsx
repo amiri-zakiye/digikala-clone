@@ -1,4 +1,4 @@
 const DashboardPage = () => {
-  return <></>;
+  return <input />;
 };
 export default DashboardPage;
