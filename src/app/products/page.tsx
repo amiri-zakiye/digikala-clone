@@ -1,31 +1,33 @@
 import ProductGrid from "./components/productsGrid";
 import { getProducts } from "./apiLayer";
-import { ShopProvider } from "./context";
 import FiltersSidebar from "./components/filtersSidebar";
 import SortTopbar from "./components/sortTopBar";
+import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import { QueryClient } from "@tanstack/react-query";
 
-const ProductsPage = async () => {
-  const { data } = await getProducts(1);
-  const { products, filters, pager } = data;
+const ProductsPage = async ({ searchParams }:{searchParams:string | string[][] | Record<string, string> | undefined}) => {
 
-  return (
-    <main className="container pt-6">
-      <div
-        className={`relative w-full flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-x-5`}
-      >
-        <ShopProvider>
-          <FiltersSidebar />
-          <section className="w-full grow relative">
-            <SortTopbar />
-            <ProductGrid
-              initialProducts={products}
-              initialFilters={filters}
-              initialPager={pager}
-            />
-          </section>
-        </ShopProvider>
-      </div>
-    </main>
+  const params = await searchParams
+  const urlParams = new URLSearchParams(params);  
+
+  const queryClient = new QueryClient()
+
+  await queryClient.prefetchInfiniteQuery({
+    queryKey: ['products'],
+    queryFn: () => getProducts(1,urlParams.toString()),
+    initialPageParam: 1,
+  })
+
+  return (    
+     <>
+        <FiltersSidebar />
+        <section className="w-full grow relative">
+          <SortTopbar />
+          <HydrationBoundary state={dehydrate(queryClient)}>
+              <ProductGrid />
+          </HydrationBoundary>
+        </section>
+    </>
   );
 };
 

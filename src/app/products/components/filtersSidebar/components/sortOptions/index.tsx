@@ -1,15 +1,16 @@
 "use client";
 
 import { memo, useState } from "react";
-import { useShop } from "@/app/products/context";
-import useQueryParameter from "../../hooks/queryParameter";
 import SortOption from "../../../sortTopBar/components/sortOption";
-import { Option } from "../../products.type";
+import { Option } from "@/app/products/types";
+import useQueryParameter from "@/app/products/hooks/queryParameter";
+import { useShop } from "@/app/products/context";
 
 const SortOptions = ({ options }: { options: Option[] }) => {
   const { defaultSort } = useShop();
   const { setQueryParam, getQueryParam } = useQueryParameter();
   const defaultSortState = getQueryParam("sort") || defaultSort;
+
   const [activeSortId, setActiveSortId] = useState(Number(defaultSortState));
 
   const onClickHandler = (item: Option) => {

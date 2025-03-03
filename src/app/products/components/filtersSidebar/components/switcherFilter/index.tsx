@@ -1,6 +1,6 @@
 "use client";
 import Switcher from "@/components/ui/switcher/switcher";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useQueryParameter from "../../../../hooks/queryParameter";
 
 const SwitcherFilter = ({ filterId }: { filterId: string }) => {
@@ -9,12 +9,10 @@ const SwitcherFilter = ({ filterId }: { filterId: string }) => {
   const [isOn, setIsOn] = useState<boolean>(defaultValue);
 
   const onClickHandler = () => {
-    setIsOn((isOnPrev) => !isOnPrev);
+    const newState = !isOn
+    setIsOn(newState);
+    setQueryParam(filterId, newState);
   };
-
-  useEffect(() => {
-    setQueryParam(filterId, isOn);
-  }, [isOn]);
 
   return <Switcher key={filterId} onClick={onClickHandler} isOn={isOn} />;
 };

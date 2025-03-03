@@ -6,11 +6,7 @@ import { ShopContextType, State } from "./types";
 import getShopActions from "./actions"
 
 const initialState: State = {
-    products: [],
-    filters: null,
-    sort: null,
-    pager: null,
-    isLoading: true,
+    productsCount: 0,
     defaultSort: 22
 };
 
@@ -24,9 +20,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return (
         <>
             <shopContext.Provider value={{...memoizedState}}>
-                <Suspense fallback={<></>}>
                 {children}
-                </Suspense>
             </shopContext.Provider>
         </>
     )

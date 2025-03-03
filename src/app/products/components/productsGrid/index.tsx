@@ -1,67 +1,48 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { useShop } from "@/app/products/context";
-import { Pager } from "@/app/products/context/types";
 import { useSearchParams } from "next/navigation";
-import { Product } from "@/types/product.types";
 import { getProducts } from "../../apiLayer";
 import useInfiniteScroll from "../../hooks/infiniteScroll";
 import ProductItem from "./components/productItem";
 import ProductsShimmer from "./components/productsShimmer";
-import { Filter } from "../../types";
 import styles from "@/app/products/styles.module.css";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { useShop } from "../../context";
+const ProductGrid = () => {
 
-const ProductGrid = ({
-  initialProducts,
-  initialPager,
-  initialFilters,
-}: {
-  initialProducts: Product[];
-  initialPager: Pager;
-  initialFilters: Filter;
-}) => {
-  const searchParams = useSearchParams();
   const ref = useRef(null);
+  const searchParams = useSearchParams();
+  const { setProductsCount } = useShop()
+
   const {
-    products,
-    appendProducts,
-    setUpInitialProducts,
-    replaceProducts,
-    resetProducts,
-    pager,
+    fetchNextPage,
+    hasNextPage,
     isLoading,
-    setloading,
-  } = useShop();
+    data,
+    isFetchingNextPage,
+    refetch
+  } = useInfiniteQuery({
+    queryKey: ['products'],
+    queryFn: ({ pageParam = 2 }) => getProducts(pageParam, searchParams.toString()), 
+    initialPageParam: 2,
+    getNextPageParam: (lastPage) => {
+      const currentPage = lastPage.data.pager.current_page;
+      const totalPages = lastPage.data.pager.total_pages;
+      return currentPage < totalPages ? currentPage + 1 : undefined;
+    },
+    getPreviousPageParam: (firstPage) => {
+      const currentPage = firstPage.data.pager.current_page;
+      return currentPage > 1 ? currentPage - 1 : undefined; 
+    }
+  });
 
-  useEffect(() => {
-    setUpInitialProducts(initialProducts, initialPager, initialFilters);
-  }, []);
 
-  useEffect(() => {
-    (async () => {
-      resetProducts();
-      const { data } = await getProducts(1, searchParams.toString());
-      const {
-        products: newProducts,
-        pager: newPager,
-        filters: newFilters,
-      } = data;
-      replaceProducts(newProducts, newPager, newFilters);
-    })();
-  }, [searchParams]);
+  const products = data?.pages.flatMap((page) => page.data.products) || [];
 
   useInfiniteScroll({
     onIntersect: async () => {
-      if (
-        pager?.current_page &&
-        pager.current_page < pager.total_pages &&
-        !isLoading
-      ) {
-        setloading(true);
-        const { current_page } = pager;
-        const { data } = await getProducts(current_page + 1, searchParams.toString());
-        const { products: newProducts, pager: newPager } = data;
-        appendProducts(newProducts, newPager);
+      if (hasNextPage && !isFetchingNextPage) {
+        await fetchNextPage();
       }
     },
     root: ref,
@@ -69,13 +50,21 @@ const ProductGrid = ({
     threshold: 0.1,
   });
 
+
+  //TODO: find a better solution
+  useEffect(() => {
+    refetch(); 
+    setProductsCount(data.pages[0].data.pager.total_items || 0)
+  }, [searchParams,refetch]);
+
+
   return (
     <>
       <div className={styles.productGrid}>
-        {products.map((product) => {
-          return <ProductItem key={`${product.id}`} product={product} />;
-        })}
-        {isLoading ? <ProductsShimmer /> : null}
+        {products.map((product) => (
+          <ProductItem key={`${product.id}`} product={product} />
+        ))}
+        {(isLoading || isFetchingNextPage) && <ProductsShimmer />}
       </div>
       <div
         ref={ref}
@@ -84,4 +73,5 @@ const ProductGrid = ({
     </>
   );
 };
+
 export default ProductGrid;

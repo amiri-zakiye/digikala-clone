@@ -18,11 +18,8 @@ const CheckboxFilter = ({
 
   const onClickHandler = (id: string) => {
     setActiveCheckboxId(id);
+    setQueryParam(`${filterId}[0]`, id);
   };
-
-  useEffect(() => {
-    setQueryParam(`${filterId}[0]`, activeCheckboxId);
-  }, [activeCheckboxId]);
 
   return (
     <div

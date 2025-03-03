@@ -18,43 +18,12 @@ export type Sort = {
   options: Option[];
 };
 
-export type Action =
-  | { type: "APPEND_PRODUCTS"; payload: { products: Product[]; pager: Pager } }
-  | {
-      type: "REPLACE_DATA";
-      payload: { products: Product[]; filters: Filter; pager: Pager };
-    }
-  | { type: "SET_LOADING"; payload: boolean }
-  | { type: "RESET_PRODUCTS" }
-  | {
-      type: "SET_INITIAL_STATE";
-      payload: { products: Product[]; filters: Filter; pager: Pager };
-    }
-  | { type: "SET_LOADING"; payload: boolean };
+export type Action = { type: "UPDATE_PRODUCT_COUNT"; payload: { count:number } };
 
 export type State = {
-  products: Product[];
-  filters: Filter | null;
-  sort: Sort | null;
-  pager: Pager | null;
-  isLoading: boolean;
+  productsCount: number;
   defaultSort: number;
 };
-export type ShopState =
-  | {
-      isLoading: true;
-      products: null;
-      filters: null;
-      sort: null;
-      pager: null;
-    }
-  | {
-      isLoading: false;
-      products: Product[];
-      filters: Filter;
-      sort: Sort;
-      pager: Pager;
-    };
 
 export type ShopContextType = {
   state: State;
