@@ -1,5 +1,5 @@
 "use client";
-import { Option } from "../../products.type";
+import { Option } from "@/app/products/types";
 
 const SortOption = ({
   isActive,
