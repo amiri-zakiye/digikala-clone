@@ -1,5 +1,4 @@
-import { SortOption } from "../commentSection/comment.types";
-
+import { SortOption } from "../../types";
 const SortComments = ({ options }: { options: SortOption[] }) => {
   return (
     <div className="flex flex-row items-center gap-x-4">

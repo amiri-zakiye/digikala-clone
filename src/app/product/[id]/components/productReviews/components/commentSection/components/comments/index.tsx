@@ -1,5 +1,5 @@
 import { toFarsiNumber } from "@/utils/formatters";
-import type { Comment as TComment } from "../commentSection/comment.types";
+import { Comment as TComment } from "../../types";
 import ProductStars from "../../../../../../../../../components/features/product/productStars";
 
 const Comments = ({ comments }: { comments: TComment[] }) => {

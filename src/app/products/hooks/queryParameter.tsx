@@ -6,6 +6,7 @@ const useQueryParameter = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  
   const setQueryParam = (paramKey: string, paramValue: string | boolean) => {
     const params = new URLSearchParams(searchParams.toString());
 

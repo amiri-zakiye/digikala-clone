@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { replace } from "@/utils/formatters";
 import { useMegaMenuContext } from "@/components/layout/header/context";
-import { Category } from "@/components/layout/header/_components/navbar/_components/megamenu/types";
+import { Category } from "../megamenu/types";
 
 const MagaMenuSideNavItem = ({item}: {item: Category}) => {
     const {activeMenuItemIndex,setActiveMenuItemIndex} = useMegaMenuContext();
